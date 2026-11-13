@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>CFBundleDevelopmentRegion</key><string>ko</string>
+  <key>CFBundleDisplayName</key><string>인연큐레이터</string>
+  <key>CFBundleExecutable</key><string>$(EXECUTABLE_NAME)</string>
+  <key>CFBundleIdentifier</key><string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+  <key>CFBundleInfoDictionaryVersion</key><string>6.0</string>
+  <key>CFBundleName</key><string>$(PRODUCT_NAME)</string>
+  <key>CFBundlePackageType</key><string>APPL</string>
+  <key>CFBundleShortVersionString</key><string>$(MARKETING_VERSION)</string>
+  <key>CFBundleVersion</key><string>$(CURRENT_PROJECT_VERSION)</string>
+  <key>LSRequiresIPhoneOS</key><true/>
+  <key>ITSAppUsesNonExemptEncryption</key><false/>
+  <key>UIRequiresFullScreen</key><true/>
+  <key>UIStatusBarHidden</key><false/>
+  <key>UIUserInterfaceStyle</key><string>Dark</string>
+  <key>UIViewControllerBasedStatusBarAppearance</key><true/>
+  <key>UILaunchScreen</key>
+  <dict>
+    <key>UIColorName</key><string>LaunchBackground</string>
+  </dict>
+  <key>UISupportedInterfaceOrientations</key>
+  <array><string>UIInterfaceOrientationPortrait</string></array>
+  <key>NSPhotoLibraryUsageDescription</key>
+  <string>프로필 액자에 걸 사진을 고를 때 사진 보관함을 사용해요.</string>
+  <key>NSCameraUsageDescription</key>
+  <string>프로필 액자에 걸 사진을 바로 찍을 때 카메라를 사용해요.</string>
+  <key>CFBundleURLTypes</key>
+  <array>
+    <dict>
+      <key>CFBundleURLName</key><string>com.inyeoncurator.app</string>
+      <key>CFBundleURLSchemes</key><array><string>com.inyeoncurator.app</string></array>
+    </dict>
+  </array>
+</dict>
+</plist>

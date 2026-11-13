@@ -1,0 +1,64 @@
+plugins {
+    id 'com.android.application'
+}
+
+// 버전: GitHub 빌드 번호를 versionCode 로 (올릴 때마다 자동 증가)
+def buildNo = (System.getenv('BUILD_NUMBER') ?: '1').toInteger()
+
+android {
+    namespace 'com.inyeoncurator.app'
+    compileSdk 36
+
+    defaultConfig {
+        applicationId 'com.inyeoncurator.app'
+        minSdk 24
+        targetSdk 36
+        versionCode buildNo
+        versionName "1.0.${buildNo}"
+        // 앱이 여는 주소 (테스트 서버로 바꿀 때만 INYEON_URL 환경변수로)
+        buildConfigField 'String', 'START_URL', "\"${System.getenv('INYEON_URL') ?: 'https://inyeoncurator.com/'}\""
+    }
+
+    signingConfigs {
+        release {
+            def ks = System.getenv('KEYSTORE_PATH')
+            if (ks) {
+                storeFile file(ks)
+                storePassword System.getenv('KEYSTORE_PASSWORD')
+                keyAlias System.getenv('KEY_ALIAS') ?: 'upload'
+                keyPassword System.getenv('KEY_PASSWORD') ?: System.getenv('KEYSTORE_PASSWORD')
+            }
+        }
+    }
+
+    buildTypes {
+        debug {
+            // 테스트 APK 도 같은 업로드 키로 서명 → 버전 올려도 덮어 설치 가능
+            if (System.getenv('KEYSTORE_PATH')) signingConfig signingConfigs.release
+        }
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            if (System.getenv('KEYSTORE_PATH')) signingConfig signingConfigs.release
+        }
+    }
+
+    buildFeatures {
+        buildConfig true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.7.1'
+    implementation 'androidx.activity:activity:1.10.1'
+    implementation 'androidx.core:core:1.16.0'
+    implementation 'androidx.webkit:webkit:1.14.0'
+    implementation 'androidx.browser:browser:1.8.0'
+    implementation 'com.android.billingclient:billing:8.0.0'
+}

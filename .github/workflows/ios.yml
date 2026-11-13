@@ -1,0 +1,164 @@
+# 인연큐레이터 아이폰 앱 자동 빌드 (Mac 없이 GitHub 의 macOS 서버에서)
+#  1) XcodeGen 으로 Xcode 프로젝트를 만든 뒤 시뮬레이터용으로 빌드
+#  2) 아이폰 시뮬레이터에서 실제로 실행해 화면을 찍어 ci-shots-ios 브랜치에 올림 (확인용)
+#  3) App Store Connect API 키가 Secrets 에 있으면 서명·업로드 → TestFlight
+name: iOS build
+
+on:
+  push:
+    branches: [ main ]
+    paths: [ 'ios/**', '.github/workflows/ios.yml' ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: macos-26
+    timeout-minutes: 45
+    env:
+      BUILD_NUMBER: ${{ github.run_number }}
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: 최신 Xcode 선택
+        run: |
+          X=$(ls -d /Applications/Xcode_2[6-9]*.app 2>/dev/null | sort -V | tail -1)
+          [ -z "$X" ] && X=$(ls -d /Applications/Xcode*.app | sort -V | tail -1)
+          sudo xcode-select -s "$X"; xcodebuild -version
+
+      - name: Xcode 프로젝트 만들기
+        run: |
+          brew install xcodegen >/dev/null
+          cd ios
+          sed -i '' "s/CURRENT_PROJECT_VERSION: \"1\"/CURRENT_PROJECT_VERSION: \"${BUILD_NUMBER}\"/" project.yml
+          xcodegen generate
+          xcodebuild -version
+
+      - name: 시뮬레이터용 빌드
+        run: |
+          cd ios
+          xcodebuild -project Inyeon.xcodeproj -scheme Inyeon -configuration Debug \
+            -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' \
+            -derivedDataPath build CODE_SIGNING_ALLOWED=NO build | tail -40
+          ls build/Build/Products/Debug-iphonesimulator/
+
+      - name: 시뮬레이터에서 실행 · 화면 캡처
+        run: |
+          set -x
+          DEV=$(xcrun simctl list devices available | grep -E "iPhone 1[5-7]( Pro)? \(" | head -1 | sed -E 's/.*\(([0-9A-F-]{36})\).*/\1/')
+          echo "device $DEV"
+          xcrun simctl boot "$DEV" || true
+          xcrun simctl bootstatus "$DEV" -b
+          xcrun simctl install "$DEV" ios/build/Build/Products/Debug-iphonesimulator/Inyeon.app
+          xcrun simctl launch "$DEV" com.inyeoncurator.app
+          sleep 30
+          mkdir -p shots
+          xcrun simctl io "$DEV" screenshot shots/home.png
+          xcrun simctl spawn "$DEV" log show --last 2m --style compact --predicate 'eventMessage CONTAINS "InyeonJS" OR process == "Inyeon"' > shots/log.txt 2>&1 || true
+          tail -60 shots/log.txt
+
+      - name: 캡처를 ci-shots 브랜치에 올리기
+        run: |
+          cd shots
+          sips -Z 900 home.png >/dev/null
+          git init -q && git checkout -q -b ci-shots-ios
+          git config user.name "ci" && git config user.email "ci@users.noreply.github.com"
+          git add . && git commit -qm "iOS sim ${BUILD_NUMBER}"
+          git push -q -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" ci-shots-ios
+
+  testflight:
+    # App Store Connect API 키(Secrets)가 있을 때만: 서명 → 아카이브 → TestFlight 업로드
+    needs: build
+    runs-on: macos-26
+    timeout-minutes: 60
+    env:
+      BUILD_NUMBER: ${{ github.run_number }}
+      ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+      ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+      ASC_KEY_P8: ${{ secrets.ASC_KEY_P8 }}
+      TEAM_ID: PBV73LKN62
+    steps:
+      - name: 키 확인
+        id: chk
+        run: |
+          if [ -n "$ASC_ISSUER_ID" ] && [ -n "$ASC_KEY_ID" ] && [ -n "$ASC_KEY_P8" ]; then echo "ok=1" >> $GITHUB_OUTPUT; else echo "::notice::App Store Connect API 키가 아직 없어 TestFlight 업로드는 건너뜀"; fi
+
+      - uses: actions/checkout@v5
+        if: steps.chk.outputs.ok == '1'
+
+      - name: 최신 Xcode 선택
+        if: steps.chk.outputs.ok == '1'
+        run: |
+          X=$(ls -d /Applications/Xcode_2[6-9]*.app 2>/dev/null | sort -V | tail -1)
+          [ -z "$X" ] && X=$(ls -d /Applications/Xcode*.app | sort -V | tail -1)
+          sudo xcode-select -s "$X"; xcodebuild -version
+
+      - name: 프로젝트 준비
+        if: steps.chk.outputs.ok == '1'
+        run: |
+          cd ios
+          brew install xcodegen >/dev/null
+          sed -i '' "s/CURRENT_PROJECT_VERSION: \"1\"/CURRENT_PROJECT_VERSION: \"${BUILD_NUMBER}\"/" project.yml
+          xcodegen generate
+
+      - name: 배포 인증서·프로파일 만들기 (이번 빌드 전용)
+        if: steps.chk.outputs.ok == '1'
+        run: |
+          KID=$(printf '%s' "$ASC_KEY_ID" | tr -d '[:space:]'); IID=$(printf '%s' "$ASC_ISSUER_ID" | tr -d '[:space:]')
+          echo "KID=$KID" >> $GITHUB_ENV; echo "IID=$IID" >> $GITHUB_ENV
+          mkdir -p "$HOME/private_keys"
+          KEYFILE="$HOME/private_keys/AuthKey_${KID}.p8"; echo "KEYFILE=$KEYFILE" >> $GITHUB_ENV
+          printf '%s\n' "$ASC_KEY_P8" | sed 's/^[[:space:]]*//;s/[[:space:]]*$//' > "$KEYFILE"
+          head -1 "$KEYFILE" | grep -q "BEGIN PRIVATE KEY" || { echo "::error::ASC_KEY_P8 내용이 -----BEGIN PRIVATE KEY----- 로 시작하지 않아요"; exit 1; }
+          python3 -m pip install --quiet --break-system-packages pyjwt cryptography
+          KID=$KID IID=$IID KEYFILE=$KEYFILE BUNDLE_ID=com.inyeoncurator.app BUNDLE_NAME=Inyeon python3 ios/ci/asc_sign.py setup
+
+      - name: 아카이브 (배포 서명)
+        if: steps.chk.outputs.ok == '1'
+        run: |
+          cd ios
+          # 앱 타깃에만 배포 서명 설정 (패키지 타깃에는 안 걸리게 project.yml 에 넣고 다시 생성)
+          python3 - <<PY
+          import re
+          p = 'project.yml'; s = open(p).read()
+          s = s.replace("        CODE_SIGN_STYLE: Automatic", "        CODE_SIGN_STYLE: Manual\n        DEVELOPMENT_TEAM: ${TEAM_ID}\n        CODE_SIGN_IDENTITY: Apple Distribution\n        PROVISIONING_PROFILE_SPECIFIER: \"${PROFILE_NAME}\"")
+          open(p, 'w').write(s)
+          PY
+          grep -n "PROVISIONING_PROFILE_SPECIFIER" project.yml
+          xcodegen generate
+          xcodebuild -project Inyeon.xcodeproj -scheme Inyeon -configuration Release \
+            -destination 'generic/platform=iOS' -archivePath build/Inyeon.xcarchive archive > archive.log 2>&1 \
+            || { grep -E "error|rror:" archive.log | head -40; tail -20 archive.log; exit 1; }
+          tail -5 archive.log
+
+      - name: TestFlight 업로드
+        if: steps.chk.outputs.ok == '1'
+        run: |
+          cd ios
+          cat > ExportOptions.plist <<PLIST
+          <?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+          <plist version="1.0"><dict>
+            <key>method</key><string>app-store-connect</string>
+            <key>destination</key><string>upload</string>
+            <key>teamID</key><string>${TEAM_ID}</string>
+            <key>signingStyle</key><string>manual</string>
+            <key>signingCertificate</key><string>Apple Distribution</string>
+            <key>provisioningProfiles</key><dict><key>com.inyeoncurator.app</key><string>${PROFILE_NAME}</string></dict>
+            <key>manageAppVersionAndBuildNumber</key><false/>
+          </dict></plist>
+          PLIST
+          xcodebuild -exportArchive -archivePath build/Inyeon.xcarchive -exportPath build/export \
+            -exportOptionsPlist ExportOptions.plist \
+            -authenticationKeyPath "$HOME/private_keys/AuthKey_${KID}.p8" \
+            -authenticationKeyID "$KID" -authenticationKeyIssuerID "$IID" > export.log 2>&1 \
+            || { grep -E "error|rror" export.log | head -40; tail -30 export.log; exit 1; }
+          tail -10 export.log
+          echo "::notice::TestFlight 업로드 완료 (빌드 ${BUILD_NUMBER}) — App Store Connect 에서 10~30분 처리 후 보임"
+
+      - name: 이번 빌드용 인증서·프로파일 정리
+        if: always() && steps.chk.outputs.ok == '1'
+        run: |
+          [ -n "$KEYFILE" ] && KID=$KID IID=$IID KEYFILE=$KEYFILE python3 ios/ci/asc_sign.py cleanup || true
