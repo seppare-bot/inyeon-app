@@ -1,0 +1,573 @@
+getpwuid_r did not find a match for uid 501
+Timestamp               Ty Process[PID:TID]
+2026-11-14 08:19:28.408 Df Inyeon[5798:5c2d] (libMobileGestalt.dylib) No persisted cache on this platform.
+2026-11-14 08:19:28.409 Df Inyeon[5798:5c49] [com.apple.xpc:connection] [0x105205700] activating connection: mach=true listener=false peer=false name=com.apple.cfprefsd.daemon
+2026-11-14 08:19:28.422 Df Inyeon[5798:5c2d] [com.apple.BoardServices:XPCErrors] [C:1] Alloc com.apple.frontboard.systemappservices
+2026-11-14 08:19:28.425 Df Inyeon[5798:5c2d] [com.apple.xpc:connection] [0x1053054d0] activating connection: mach=false listener=false peer=false name=(anonymous)
+2026-11-14 08:19:28.427 A  Inyeon[5798:5c4a] (CoreFoundation) Loading Preferences From User Session CFPrefsD
+2026-11-14 08:19:28.479 Df Inyeon[5798:5c49] [com.apple.UIKit:BackgroundTask] Creating new assertion because there is no existing background assertion.
+2026-11-14 08:19:28.479 Df Inyeon[5798:5c49] [com.apple.UIKit:BackgroundTask] Creating new background assertion
+2026-11-14 08:19:28.480 Df Inyeon[5798:5c49] [com.apple.UIKit:BackgroundTask] Created new background assertion <BKSProcessAssertion: 0x600002106d00>
+2026-11-14 08:19:28.480 Df Inyeon[5798:5c49] [com.apple.runningboard:connection] Initializing connection
+2026-11-14 08:19:28.480 Df Inyeon[5798:5c49] [com.apple.runningboard:process] Removing all cached process handles
+2026-11-14 08:19:28.481 Df Inyeon[5798:5c49] [com.apple.runningboard:connection] Creating connection to com.apple.runningboard
+2026-11-14 08:19:28.481 Df Inyeon[5798:5c49] [com.apple.xpc:connection] [0x105305ab0] activating connection: mach=true listener=false peer=false name=com.apple.runningboard
+2026-11-14 08:19:28.482 Df Inyeon[5798:5c4d] [com.apple.runningboard:connection] Sending handshake request attempt #1 to server
+2026-11-14 08:19:28.484 Df Inyeon[5798:5c2d] [com.apple.UIKit:Application] Deactivation reason added: 10; deactivation reasons: 0 -> 1024; animating application lifecycle event: 0
+2026-11-14 08:19:28.484 A  Inyeon[5798:5c4e] (RunningBoardServices) didChangeInheritances
+2026-11-14 08:19:28.484 Df Inyeon[5798:5c4d] [com.apple.runningboard:connection] Handshake succeeded
+2026-11-14 08:19:28.484 Df Inyeon[5798:5c2d] [com.apple.BoardServices:Injection] activating monitor for service com.apple.frontboard.open
+2026-11-14 08:19:28.485 Df Inyeon[5798:5c4d] [com.apple.runningboard:connection] Identity resolved as app<com.inyeoncurator.app((null))>
+2026-11-14 08:19:28.485 Df Inyeon[5798:5c2d] [com.apple.BoardServices:Injection] activating monitor for service com.apple.frontboard.workspace-service
+2026-11-14 08:19:28.493 Df Inyeon[5798:5c49] [com.apple.UIKit:BackgroundTask] Incrementing reference count for background assertion <BKSProcessAssertion: 0x600002106d00>
+2026-11-14 08:19:28.494 Df Inyeon[5798:5c49] [com.apple.UIKit:BackgroundTask] Created background task <_UIBackgroundTaskInfo: 0x600001708380>: taskID = 1, taskName = Launch Background Task for Coalescing, creationTime = 443 (elapsed = 0).
+2026-11-14 08:19:28.494 Df Inyeon[5798:5c2d] [com.apple.FrontBoard:Common] FBSWorkspace registering source: com.apple.frontboard.systemappservices
+2026-11-14 08:19:28.494 Df Inyeon[5798:5c49] [com.apple.FrontBoard:SceneExtension] Realizing settings extension _UIApplicationSceneKeyboardSettings on FBSSceneSettings
+2026-11-14 08:19:28.507 Df Inyeon[5798:5c49] [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneOcclusionSettings> on FBSSceneSettings
+2026-11-14 08:19:28.508 Df Inyeon[5798:5c49] [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneInterfaceProtectionSettings> on FBSSceneSettings
+2026-11-14 08:19:28.509 Df Inyeon[5798:5c2d] [com.apple.FrontBoard:Common] FBSWorkspace connected to endpoint : <BSServiceConnectionEndpoint: 0x600000206480; target: com.apple.frontboard.systemappservices; service: com.apple.frontboard.workspace-service>
+2026-11-14 08:19:28.509 Df Inyeon[5798:5c49] [com.apple.FrontBoard:SceneExtension] Realizing settings extension _UISceneLayoutPreferencesHostSettingsExtension on FBSSceneSettings
+2026-11-14 08:19:28.509 Df Inyeon[5798:5c2d] [com.apple.FrontBoard:Common] <FBSWorkspaceScenesClient:0x6000030041b0 com.apple.frontboard.systemappservices> attempting immediate handshake from activate
+2026-11-14 08:19:28.509 Df Inyeon[5798:5c2d] [com.apple.FrontBoard:Common] <FBSWorkspaceScenesClient:0x6000030041b0 com.apple.frontboard.systemappservices> sent handshake
+2026-11-14 08:19:28.510 Df Inyeon[5798:5c49] [com.apple.FrontBoard:SceneExtension] Realizing settings extension _UISceneSafeAreaSettingsExtension on FBSSceneSettings
+2026-11-14 08:19:28.511 Df Inyeon[5798:5c2d] [com.apple.runningboard:general] Added observer for process assertions expiration warning: <_RBSExpirationWarningClient: 0x60000020d3a0>
+2026-11-14 08:19:28.516 Df Inyeon[5798:5c49] [com.apple.FrontBoard:SceneExtension] Realizing settings extension _UISceneLayoutPreferenceClientSettingsExtension on FBSSceneClientSettings
+2026-11-14 08:19:28.517 Df Inyeon[5798:5c49] [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UIHomeAffordanceHostSceneSettings> on FBSSceneSettings
+2026-11-14 08:19:28.520 Df Inyeon[5798:5c49] [com.apple.FrontBoard:SceneExtension] Realizing settings extension _UISystemShellSceneHostingEnvironmentSettings on FBSSceneSettings
+2026-11-14 08:19:28.520 Df Inyeon[5798:5c49] [com.apple.FrontBoard:SceneExtension] Realizing settings extension _UISceneRenderingEnvironmentSettings on FBSSceneSettings
+2026-11-14 08:19:28.521 Df Inyeon[5798:5c49] [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneRenderingEnvironmentClientSettings> on FBSSceneClientSettings
+2026-11-14 08:19:28.521 Df Inyeon[5798:5c49] [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneTransitioningHostSettings> on FBSSceneSettings
+2026-11-14 08:19:28.521 Df Inyeon[5798:5c49] [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneFocusSystemSettings> on FBSSceneSettings
+2026-11-14 08:19:28.522 Df Inyeon[5798:5c49] [com.apple.FrontBoard:SceneExtension] Realizing settings extension _UISceneOrientationSettingsExtension on FBSSceneSettings
+2026-11-14 08:19:28.522 Df Inyeon[5798:5c49] [com.apple.FrontBoard:SceneExtension] Realizing settings extension _UISceneOrientationClientSettingsExtension on FBSSceneClientSettings
+2026-11-14 08:19:28.522 Df Inyeon[5798:5c49] [com.apple.FrontBoard:SceneExtension] Realizing settings extension _UISceneWindowingControlClientSettings on FBSSceneClientSettings
+2026-11-14 08:19:28.525 Df Inyeon[5798:5c49] [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneHostingContentSizePreferenceClientSettings> on FBSSceneClientSettings
+2026-11-14 08:19:28.526 Df Inyeon[5798:5c49] [com.apple.FrontBoard:SceneExtension] Realizing settings extension _UISceneHostingTraitCollectionPropagationSettings on FBSSceneSettings
+2026-11-14 08:19:28.529 Df Inyeon[5798:5c49] [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneHostingSheetPresentationSettings> on FBSSceneSettings
+2026-11-14 08:19:28.529 Df Inyeon[5798:5c2d] [com.apple.UIKit:UIScreen] Evaluated capturing state as 0 on <UIScreen: 0x1053067e0> for initial
+2026-11-14 08:19:28.530 Df Inyeon[5798:5c2d] [com.apple.UIKit:UIScreen] Evaluated capturing state as 0 on <UIScreen: 0x1053067e0> for CADisplay KVO
+2026-11-14 08:19:28.530 Df Inyeon[5798:5c49] [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneHostingSheetPresentationClientSettings> on FBSSceneClientSettings
+2026-11-14 08:19:28.530 Df Inyeon[5798:5c49] [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneHostingEventDeferringSettings> on FBSSceneSettings
+2026-11-14 08:19:28.531 Df Inyeon[5798:5c49] [com.apple.FrontBoard:SceneExtension] Realizing settings extension <UIKit__UITypedKeyValueSceneSettings> on FBSSceneSettings
+2026-11-14 08:19:28.531 Df Inyeon[5798:5c49] [com.apple.FrontBoard:SceneExtension] Realizing settings extension <UIKit__UITypedKeyValueSceneSettings> on FBSSceneClientSettings
+2026-11-14 08:19:28.532 Df Inyeon[5798:5c49] [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneHostingViewControllerPreferencePropagationClientSettings> on FBSSceneClientSettings
+2026-11-14 08:19:28.533 Df Inyeon[5798:5c2d] [com.apple.Accessibility:AXSupportCommon] Read CategoryName: per-app = 1, category name = (null)
+2026-11-14 08:19:28.533 Df Inyeon[5798:5c49] [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneZoomTransitionSettings> on FBSSceneSettings
+2026-11-14 08:19:28.533 Df Inyeon[5798:5c2d] [com.apple.Accessibility:AXSupportCommon] Read CategoryName: per-app = 0, category name = (null)
+2026-11-14 08:19:28.534 Df Inyeon[5798:5c4b] [com.apple.FrontBoard:SceneExtension] Realizing settings extension FBSSceneSettingsCore on FBSSceneSettings
+2026-11-14 08:19:28.534 Df Inyeon[5798:5c4b] [com.apple.FrontBoard:SceneExtension] Realizing settings extension FBSSceneClientSettingsCore on FBSSceneClientSettings
+2026-11-14 08:19:28.571 Df Inyeon[5798:5c4b] [com.apple.FrontBoard:SceneExtension] UIMutableApplicationSceneSettings setting counterpart class: UIApplicationSceneSettings
+2026-11-14 08:19:28.572 Df Inyeon[5798:5c4b] [com.apple.FrontBoard:SceneExtension] UIMutableApplicationSceneClientSettings setting counterpart class: UIApplicationSceneClientSettings
+2026-11-14 08:19:28.572 Df Inyeon[5798:5c4b] [com.apple.FrontBoard:SceneExtension] Realizing settings extension FBSSceneTransitionContextCore on FBSSceneTransitionContext
+2026-11-14 08:19:28.574 Df Inyeon[5798:5c2d] [com.apple.dt.xctest:Default] Registering for test daemon availability notify post.
+2026-11-14 08:19:28.575 Df Inyeon[5798:5c2d] [com.apple.dt.xctest:Default] notify_get_state check indicated test daemon not ready.
+2026-11-14 08:19:28.576 Df Inyeon[5798:5c2d] [com.apple.dt.xctest:Default] notify_get_state check indicated test daemon not ready.
+2026-11-14 08:19:28.576 Df Inyeon[5798:5c2d] [com.apple.dt.xctest:Default] notify_get_state check indicated test daemon not ready.
+2026-11-14 08:19:28.579 Df Inyeon[5798:5c2d] [com.apple.UIKit:UpdateScheduler] Selected display: name=LCD (PurpleMain), id=1
+2026-11-14 08:19:28.586 Df Inyeon[5798:5c2d] [com.apple.UIKit:BackgroundTask] Will add backgroundTask with taskName: Persistent SceneSession Map Update, expirationHandler: <__NSGlobalBlock__: 0x1e61729e0>
+2026-11-14 08:19:28.586 Df Inyeon[5798:5c2d] [com.apple.UIKit:BackgroundTask] Reusing background assertion <BKSProcessAssertion: 0x600002106d00>
+2026-11-14 08:19:28.586 Df Inyeon[5798:5c2d] [com.apple.UIKit:BackgroundTask] Incrementing reference count for background assertion <BKSProcessAssertion: 0x600002106d00>
+2026-11-14 08:19:28.586 Df Inyeon[5798:5c2d] [com.apple.UIKit:BackgroundTask] Created background task <_UIBackgroundTaskInfo: 0x600001719900>: taskID = 2, taskName = Persistent SceneSession Map Update, creationTime = 443 (elapsed = 0).
+2026-11-14 08:19:28.587 Df Inyeon[5798:5c2d] [com.apple.UIKit:Application] Deactivation reason added: 5; deactivation reasons: 1024 -> 1056; animating application lifecycle event: 1
+2026-11-14 08:19:28.587 Df Inyeon[5798:5c2d] [com.apple.UIKit:InterfaceStyle] Not push traits update to screen for new style 2, <UIWindowScene: 0x105308210> (D5D9DC22-046C-48A7-8559-AB9DEC2CDD29)
+2026-11-14 08:19:28.588 Df Inyeon[5798:5c2d] [com.apple.UIKit:InterfaceStyle] Should send trait collection or coordinate space update, interface style 2 -> 2, <UIWindowScene: 0x105308210> (D5D9DC22-046C-48A7-8559-AB9DEC2CDD29)
+2026-11-14 08:19:28.590 Df Inyeon[5798:5c2d] [com.apple.UIKit:InterfaceStyle] Not push traits update to screen for new style 2, <UIWindowScene: 0x105308210> (D5D9DC22-046C-48A7-8559-AB9DEC2CDD29)
+2026-11-14 08:19:28.591 Df Inyeon[5798:5c2d] [com.apple.UIKit:HomeAffordanceObservation] Initializing: <_UIHomeAffordanceSceneNotifier: 0x60000290c460>; with scene: <UIWindowScene: 0x105308210>
+2026-11-14 08:19:28.591 Df Inyeon[5798:5c2d] [com.apple.BacklightServices:scenes] 0x600000c0f540 setDelegate:<0x600000c0f3c0 _UIBacklightEnvironment> hasDelegate:YES for environment:sceneID:com.inyeoncurator.app-default
+2026-11-14 08:19:28.593 Df Inyeon[5798:5c2d] [com.apple.UIKit:InterfaceStyle] Not push traits update to screen for new style 2, <UIWindowScene: 0x105308210> (D5D9DC22-046C-48A7-8559-AB9DEC2CDD29)
+2026-11-14 08:19:28.593 Df Inyeon[5798:5c2d] [com.apple.UIKit:EventDeferring] [0x600002910770] Initialized with scene: <UIWindowScene: 0x105308210>; behavior: <_UIEventDeferringBehavior_iOS: 0x600000211de0>; availableForProcess: 1, systemShellManagesKeyboardFocus: 1
+2026-11-14 08:19:28.595 Df Inyeon[5798:5c2d] [com.apple.BoardServices:XPCErrors] [C:2] Alloc com.apple.backboard.hid-services.xpc
+2026-11-14 08:19:28.595 Df Inyeon[5798:5c2d] [com.apple.xpc:connection] [0x10530a110] activating connection: mach=false listener=false peer=false name=(anonymous)
+2026-11-14 08:19:28.598 Df Inyeon[5798:5c4f] [com.apple.BackBoard:EventDelivery] BKSHIDEventObserver - connection activation
+2026-11-14 08:19:28.598 Df Inyeon[5798:5c2d] [com.apple.BackBoard:EventDelivery] policyStatus:<BKSHIDEventDeliveryPolicyObserver: 0x600002609320; process scope; status: target> was:none
+2026-11-14 08:19:28.598 Df Inyeon[5798:5c2d] [com.apple.UIKit:KeyWindow] Setting default evaluation strategy for UIUserInterfaceIdiomPhone to LastOneWins
+2026-11-14 08:19:28.599 Df Inyeon[5798:5c2d] [com.apple.UIKit:KeyWindow] Scene target of keyboard event deferring environment did change: 1; scene: UIWindowScene: 0x105308210; scene identity: com.apple.frontboard.systemappservices/FBSceneManager:sceneID%3Acom.inyeoncurator.app-default
+2026-11-14 08:19:28.599 Df Inyeon[5798:5c2d] [com.apple.UIKit:EventDeferring] [0x600002910770] Scene target of event deferring environments did update: scene: 0x105308210; current systemShellManagesKeyboardFocus: 1; systemShellManagesKeyboardFocusForScene: 1; eligibleForRecordRemoval: 1;
+2026-11-14 08:19:28.599 Df Inyeon[5798:5c2d] [com.apple.UIKit:KeyWindow] Scene became target of keyboard event deferring environment: UIWindowScene: 0x105308210; scene identity: com.apple.frontboard.systemappservices/FBSceneManager:sceneID%3Acom.inyeoncurator.app-default
+2026-11-14 08:19:28.599 Df Inyeon[5798:5c2d] [com.apple.UIKit:KeyWindow] Stack[KeyWindow] 0x600000c14630: Taking no further action for migration from LastOneWins -> SystemShellManaged as there are no scenes
+2026-11-14 08:19:28.599 Df Inyeon[5798:5c2d] [com.apple.UIKit:KeyWindow] Setting default evaluation strategy for UIUserInterfaceIdiomPhone to SystemShellManaged
+2026-11-14 08:19:28.600 Df Inyeon[5798:5c2d] [com.apple.UIKit:KeyWindow] Key window needs update: 0; currentKeyWindowScene: 0x0; evaluatedKeyWindowScene: 0x105308210; currentApplicationKeyWindow: 0x0; evaluatedApplicationKeyWindow: 0x0; reason: UIWindowScene: 0x105308210: Window scene became target of keyboard environment
+2026-11-14 08:19:28.601 Df Inyeon[5798:5c2d] [com.apple.UIKit:InterfaceStyle] Not push traits update to screen for new style 2, <UIWindowScene: 0x105308210> (D5D9DC22-046C-48A7-8559-AB9DEC2CDD29)
+2026-11-14 08:19:28.601 Df Inyeon[5798:5c2d] [com.apple.UIKit:InterfaceStyle] Not push traits update to screen for new style 2, <UIWindowScene: 0x105308210> (D5D9DC22-046C-48A7-8559-AB9DEC2CDD29)
+2026-11-14 08:19:28.603 Df Inyeon[5798:5c2d] [com.apple.UIKit:InterfaceStyle] Not push traits update to screen for new style 2, <UIWindowScene: 0x105308210> (D5D9DC22-046C-48A7-8559-AB9DEC2CDD29)
+2026-11-14 08:19:28.604 F  Inyeon[5798:5c2d] [com.apple.runtime-issues:UIKit App Config] `UIScene` lifecycle will soon be required. Failure to adopt will result in an assert in the future.
+2026-11-14 08:19:28.604 A  Inyeon[5798:5c2d] (libsystem_trace.dylib) Activity for state dumps
+2026-11-14 08:19:28.606 Df Inyeon[5798:5c2d] [com.apple.UIKit:InterfaceStyle] Not push traits update to screen for new style 2, <UIWindowScene: 0x105308210> (D5D9DC22-046C-48A7-8559-AB9DEC2CDD29)
+2026-11-14 08:19:28.608 Df Inyeon[5798:5c2d] [com.apple.UIKit:AppLifecycle] sceneOfRecord: sceneID: sceneID:com.inyeoncurator.app-default  persistentID: D5D9DC22-046C-48A7-8559-AB9DEC2CDD29
+2026-11-14 08:19:28.609 Df Inyeon[5798:5c2d] [com.apple.UIKit:Application] Ignoring already applied deactivation reason: 5; deactivation reasons: 1056
+2026-11-14 08:19:28.609 Df Inyeon[5798:5c2d] [com.apple.UIKit:Application] Deactivation reason added: 11; deactivation reasons: 1056 -> 3104; animating application lifecycle event: 1
+2026-11-14 08:19:28.610 Df Inyeon[5798:5c2d] [com.apple.KeyboardArbiter:Client] startConnection
+2026-11-14 08:19:28.613 Df Inyeon[5798:5c2d] [com.apple.xpc:connection] [0x1052113c0] activating connection: mach=true listener=false peer=false name=com.apple.UIKit.KeyboardManagement.hosted
+2026-11-14 08:19:28.618 Df Inyeon[5798:5c2d] [com.apple.UserNotifications:Connections] [com.inyeoncurator.app] Creating a user notification center
+2026-11-14 08:19:28.750 A  Inyeon[5798:5c2d] (TCC) TCCAccessRequest() IPC
+2026-11-14 08:19:28.750 Df Inyeon[5798:5c2d] [com.apple.xpc:connection] [0x104f0b8a0] activating connection: mach=true listener=false peer=false name=com.apple.tccd
+2026-11-14 08:19:28.764 Df Inyeon[5798:5c2d] [com.apple.xpc:connection] [0x104f0b8a0] invalidated after the last release of the connection object
+2026-11-14 08:19:28.766 A  Inyeon[5798:5c2d] (TCC) TCCAccessRequest() IPC
+2026-11-14 08:19:28.766 Df Inyeon[5798:5c2d] [com.apple.xpc:connection] [0x105207ef0] activating connection: mach=true listener=false peer=false name=com.apple.tccd
+2026-11-14 08:19:28.769 Df Inyeon[5798:5c2d] [com.apple.xpc:connection] [0x105207ef0] invalidated after the last release of the connection object
+2026-11-14 08:19:28.799 Df Inyeon[5798:5c2d] (WebKit) 0x1120680e0 - [PID=0] WebProcessCache::updateCapacity: Cache is disabled because process swap on navigation is disabled
+2026-11-14 08:19:28.823 Df Inyeon[5798:5c2d] (libMobileGestalt.dylib) No persisted cache on this platform.
+2026-11-14 08:19:28.867 Df Inyeon[5798:5c4f] [com.apple.xpc:connection] [0x10520d760] activating connection: mach=true listener=false peer=false name=com.apple.webprivacyd
+2026-11-14 08:19:28.874 Df Inyeon[5798:5c2d] [com.apple.WebKit:Storage] 0x104f0b0a8 - WebsiteDataStore::WebsiteDataStore sessionID=1 identifier=null
+2026-11-14 08:19:28.878 A  Inyeon[5798:5c4e] (libsystem_containermanager.dylib) container_system_group_path_for_identifier
+2026-11-14 08:19:28.878 Df Inyeon[5798:5c4e] [com.apple.containermanager:xpc] Requesting container lookup; class = 13, identifier = (null), group_identifier = systemgroup.com.apple.configurationprofiles, create = 1, temp = 0, euid = 501, uid = 501
+2026-11-14 08:19:28.878 A  Inyeon[5798:5c4e] (libsystem_containermanager.dylib) container_query_t
+2026-11-14 08:19:28.878 Df Inyeon[5798:5c4e] [com.apple.containermanager:xpc] Query; euid = 501, uid = 501, class = 13, identifier = [(null)](0), flags = 900000003
+2026-11-14 08:19:28.883 Df Inyeon[5798:5c2d] [com.apple.WebKit:Process] 0x10520a228 - PageConfiguration::delaysWebProcessLaunchUntilFirstLoad() -> false because of associated processPool value
+2026-11-14 08:19:28.883 Df Inyeon[5798:5c2d] [com.apple.WebKit:Process] 0x10581c808 - WebProcessPool::createWebPage: Not delaying WebProcess launch
+2026-11-14 08:19:28.884 Df Inyeon[5798:5c2d] [com.apple.WebKit:Process] 0x1120c80c0 - [PID=0] WebProcessProxy::constructor:
+2026-11-14 08:19:28.884 Df Inyeon[5798:5c4e] [com.apple.containermanager:unspecified] _container_query_get_result_at_index: success
+2026-11-14 08:19:28.885 A  Inyeon[5798:5c4e] (libsystem_containermanager.dylib) container_copy_object
+2026-11-14 08:19:28.885 Df Inyeon[5798:5c4e] [com.apple.containermanager:unspecified] container_system_group_path_for_identifier: success
+2026-11-14 08:19:28.885 Df Inyeon[5798:5c4e] [com.apple.ManagedConfiguration:MC] Got system group container path from MCM for systemgroup.com.apple.configurationprofiles: /Users/runner/Library/Developer/CoreSimulator/Devices/98A0BFA3-CEC3-4FD6-9916-5A2149774DBF/data/Containers/Shared/SystemGroup/systemgroup.com.apple.configurationprofiles
+2026-11-14 08:19:28.895 Df Inyeon[5798:5c4b] [com.apple.xpc:connection] [0x10520b560] activating connection: mach=true listener=false peer=false name=com.apple.lsd.mapdb
+2026-11-14 08:19:28.898 Df Inyeon[5798:5c2d] [com.apple.WebKit:Sandbox] Successfully created a sandbox extension for '/Users/runner/Library/Developer/CoreSimulator/Devices/98A0BFA3-CEC3-4FD6-9916-5A2149774DBF/data/Containers/Bundle/Application/880716DA-4AB3-4397-9A44-0C2469910373/Inyeon.app'
+2026-11-14 08:19:28.903 Df Inyeon[5798:5c4b] [com.apple.extensionkit:launch] Launching process with config: bundleID: com.apple.WebKit.WebContent instance ID: Optional([_EXExtensionInstanceIdentifier: 1A06B41E-EF48-47AC-A149-E469D548D171])
+2026-11-14 08:19:28.909 Df Inyeon[5798:5c2d] [com.apple.avkit:AVKit] +[AVPictureInPicturePlatformAdapter isPictureInPictureSupported]_block_invoke isPictureInPictureSupported NO
+2026-11-14 08:19:28.920 Df Inyeon[5798:5c2d] (libMobileGestalt.dylib) No persisted cache on this platform.
+2026-11-14 08:19:28.921 Df Inyeon[5798:5c2d] [com.apple.xpc:connection] [0x10530bab0] activating connection: mach=true listener=false peer=false name=com.apple.IOSurface.Remote
+2026-11-14 08:19:28.924 Df Inyeon[5798:5c2d] [com.apple.WebKit:Sandbox] Successfully created a sandbox extension for '/Users/runner/Library/Developer/CoreSimulator/Devices/98A0BFA3-CEC3-4FD6-9916-5A2149774DBF/data/Containers/Data/Application/1039A6E0-E4C5-4F42-89F9-51F27F8975C8/Library/WebKit/com.inyeoncurator.app/WebsiteData/MediaKeys/v1'
+2026-11-14 08:19:28.925 Df Inyeon[5798:5c2d] [com.apple.WebKit:ProcessSuspension] 0x1120e00c0 - [PID=0, throttler=0x1120c8150] ProcessThrottler::Activity::Activity: Starting foreground activity / 'Process initialization'
+2026-11-14 08:19:28.939 Df Inyeon[5798:5c4e] [com.apple.xpc:connection] [0x104f0e020] activating connection: mach=true listener=false peer=false name=com.apple.accessibility.mediaaccessibilityd
+2026-11-14 08:19:28.972 Df Inyeon[5798:5c2d] [com.apple.WebKit:Loading] 0x106031a18 - [pageProxyID=8, webPageID=9, PID=0] WebPageProxy::constructor, site isolation enabled 0
+2026-11-14 08:19:28.980 Df Inyeon[5798:5c2d] [com.apple.WebKit:Media] PlaybackSessionManagerProxy::PlaybackSessionManagerProxy(2486452780)
+2026-11-14 08:19:28.984 Df Inyeon[5798:5c2d] [com.apple.WebKit:Fullscreen] PlaybackSessionManagerProxy::VideoPresentationManagerProxy(2486452780)
+2026-11-14 08:19:28.996 Df Inyeon[5798:5c2d] [com.apple.WebKit:Process] 0x1120c80c0 - [PID=0] WebProcessProxy::addExistingWebPage: webPage=0x106031a18, pageProxyID=8, webPageID=9
+2026-11-14 08:19:29.002 Df Inyeon[5798:5c2d] [com.apple.WebKit:ProcessSwapping] 0x1120680e0 - [PID=0] WebProcessCache::updateCapacity: Cache is disabled by client
+2026-11-14 08:19:29.005 Df Inyeon[5798:5c2d] [com.apple.WebKit:Sandbox] Successfully created a sandbox extension for '/Users/runner/Library/Developer/CoreSimulator/Devices/98A0BFA3-CEC3-4FD6-9916-5A2149774DBF/data/Containers/Data/Application/1039A6E0-E4C5-4F42-89F9-51F27F8975C8/Library/Caches/com.apple.WebKit.GPU'
+2026-11-14 08:19:29.006 Df Inyeon[5798:5c2d] [com.apple.WebKit:Sandbox] Successfully created a sandbox extension for '/Users/runner/Library/Developer/CoreSimulator/Devices/98A0BFA3-CEC3-4FD6-9916-5A2149774DBF/data/Containers/Data/Application/1039A6E0-E4C5-4F42-89F9-51F27F8975C8/tmp/com.apple.WebKit.GPU'
+2026-11-14 08:19:29.007 Df Inyeon[5798:5c2d] (libMobileGestalt.dylib) No persisted cache on this platform.
+2026-11-14 08:19:29.007 Df Inyeon[5798:5c2d] [com.apple.WebKit:ProcessSuspension] 0x1120e0120 - [PID=0, throttler=0x112108270] ProcessThrottler::Activity::Activity: Starting foreground activity / 'Process initialization'
+2026-11-14 08:19:29.009 Df Inyeon[5798:5c51] [com.apple.extensionkit:launch] Launching process with config: bundleID: com.apple.WebKit.GPU instance ID: Optional([_EXExtensionInstanceIdentifier: 9CC2FCF7-1908-4927-8776-34E76EB70B0D])
+2026-11-14 08:19:29.022 Df Inyeon[5798:5c2d] [com.apple.WebKit:TextInteraction] Conforming to BrowserEngineKit text input protocol
+2026-11-14 08:19:29.062 Df Inyeon[5798:5c2d] [com.apple.WebKit:Loading] 0x106031a18 - [pageProxyID=8, webPageID=9, PID=0] WebPageProxy::loadRequest:
+2026-11-14 08:19:29.063 Df Inyeon[5798:5c2d] [com.apple.runningboard:connection] Creating side-channel connection to com.apple.runningboard
+2026-11-14 08:19:29.063 Df Inyeon[5798:5c2d] [com.apple.xpc:connection] [0x10530b0b0] activating connection: mach=true listener=false peer=false name=com.apple.runningboard
+2026-11-14 08:19:29.065 Df Inyeon[5798:5c2d] [com.apple.runningboard:process] Hit the server for a process handle f5335e2000016a6 that resolved to: [app<com.inyeoncurator.app((null))>:5798]
+2026-11-14 08:19:29.065 Df Inyeon[5798:5c2d] [com.apple.WebKit:Process] 0x106031a18 - [pageProxyID=8, webPageID=9, PID=0] WebPageProxy::WebPageProxy::shouldForceForegroundPriorityForClientNavigation() returns 1 based on PageClient::canTakeForegroundAssertions()
+2026-11-14 08:19:29.066 Df Inyeon[5798:5c2d] [com.apple.WebKit:ProcessSuspension] 0x1120e01b0 - [PID=0, throttler=0x1120c8150] ProcessThrottler::Activity::Activity: Starting foreground activity / 'Client navigation'
+2026-11-14 08:19:29.066 Df Inyeon[5798:5c2d] [com.apple.WebKit:Loading] 0x106031a18 - [pageProxyID=8, webPageID=9, PID=0] WebPageProxy::loadRequestWithNavigationShared:
+2026-11-14 08:19:29.070 A  Inyeon[5798:5c2d] (libsystem_containermanager.dylib) container_system_group_path_for_identifier
+2026-11-14 08:19:29.071 Df Inyeon[5798:5c2d] [com.apple.containermanager:xpc] Requesting container lookup; class = 13, identifier = com.apple.nsurlsessiond, group_identifier = systemgroup.com.apple.nsurlstoragedresources, create = 1, temp = 0, euid = 501, uid = 501
+2026-11-14 08:19:29.071 A  Inyeon[5798:5c2d] (libsystem_containermanager.dylib) container_query_t
+2026-11-14 08:19:29.071 Df Inyeon[5798:5c2d] [com.apple.containermanager:xpc] Query; euid = 501, uid = 501, class = 13, identifier = [com.apple.nsurlsessiond](1), flags = 900000003
+2026-11-14 08:19:29.073 Df Inyeon[5798:5c2d] [com.apple.containermanager:unspecified] _container_query_get_result_at_index: success
+2026-11-14 08:19:29.073 A  Inyeon[5798:5c2d] (libsystem_containermanager.dylib) container_copy_object
+2026-11-14 08:19:29.073 Df Inyeon[5798:5c2d] [com.apple.containermanager:unspecified] container_system_group_path_for_identifier: success
+2026-11-14 08:19:29.076 Df Inyeon[5798:5c2d] [com.apple.WebKit:Process] 0x112130100 - NetworkProcessProxy::NetworkProcessProxy
+2026-11-14 08:19:29.077 Df Inyeon[5798:5c2d] [com.apple.WebKit:Sandbox] Successfully created a sandbox extension for '/Users/runner/Library/Developer/CoreSimulator/Devices/98A0BFA3-CEC3-4FD6-9916-5A2149774DBF/data/Containers/Data/Application/1039A6E0-E4C5-4F42-89F9-51F27F8975C8/Library/WebKit/com.inyeoncurator.app/WebsiteData/ResourceLoadStatistics'
+2026-11-14 08:19:29.077 Df Inyeon[5798:5c2d] [com.apple.WebKit:Sandbox] Successfully created a sandbox extension for '/Users/runner/Library/Developer/CoreSimulator/Devices/98A0BFA3-CEC3-4FD6-9916-5A2149774DBF/data/Containers/Data/Application/1039A6E0-E4C5-4F42-89F9-51F27F8975C8/Library/Caches/com.inyeoncurator.app/WebKit/NetworkCache'
+2026-11-14 08:19:29.077 Df Inyeon[5798:5c2d] [com.apple.WebKit:Sandbox] Successfully created a sandbox extension for '/Users/runner/Library/Developer/CoreSimulator/Devices/98A0BFA3-CEC3-4FD6-9916-5A2149774DBF/data/Containers/Data/Application/1039A6E0-E4C5-4F42-89F9-51F27F8975C8/Library/Caches/com.inyeoncurator.app/WebKit/HSTS'
+2026-11-14 08:19:29.077 Df Inyeon[5798:5c2d] [com.apple.WebKit:Sandbox] Successfully created a sandbox extension for '/Users/runner/Library/Developer/CoreSimulator/Devices/98A0BFA3-CEC3-4FD6-9916-5A2149774DBF/data/Containers/Data/Application/1039A6E0-E4C5-4F42-89F9-51F27F8975C8/Library/WebKit/com.inyeoncurator.app/WebsiteData/ResourceMonitorThrottler'
+2026-11-14 08:19:29.077 Df Inyeon[5798:5c2d] [com.apple.WebKit:Sandbox] Successfully created a sandbox extension for '/Users/runner/Library/Developer/CoreSimulator/Devices/98A0BFA3-CEC3-4FD6-9916-5A2149774DBF/data/Containers/Data/Application/1039A6E0-E4C5-4F42-89F9-51F27F8975C8/Library/WebKit/com.inyeoncurator.app/WebsiteData/LocalStorage'
+2026-11-14 08:19:29.077 Df Inyeon[5798:5c2d] [com.apple.WebKit:Sandbox] Successfully created a sandbox extension for '/Users/runner/Library/Developer/CoreSimulator/Devices/98A0BFA3-CEC3-4FD6-9916-5A2149774DBF/data/Containers/Data/Application/1039A6E0-E4C5-4F42-89F9-51F27F8975C8/Library/WebKit/com.inyeoncurator.app/WebsiteData/IndexedDB'
+2026-11-14 08:19:29.077 Df Inyeon[5798:5c2d] [com.apple.WebKit:Sandbox] Successfully created a sandbox extension for '/Users/runner/Library/Developer/CoreSimulator/Devices/98A0BFA3-CEC3-4FD6-9916-5A2149774DBF/data/Containers/Data/Application/1039A6E0-E4C5-4F42-89F9-51F27F8975C8/Library/WebKit/com.inyeoncurator.app/WebsiteData/Default'
+2026-11-14 08:19:29.077 Df Inyeon[5798:5c2d] [com.apple.WebKit:Sandbox] Successfully created a sandbox extension for '/Users/runner/Library/Developer/CoreSimulator/Devices/98A0BFA3-CEC3-4FD6-9916-5A2149774DBF/data/Containers/Data/Application/1039A6E0-E4C5-4F42-89F9-51F27F8975C8/Library/Caches/com.inyeoncurator.app/WebKit/CacheStorage'
+2026-11-14 08:19:29.077 Df Inyeon[5798:5c2d] [com.apple.WebKit:Sandbox] Successfully created a sandbox extension for '/Users/runner/Library/Developer/CoreSimulator/Devices/98A0BFA3-CEC3-4FD6-9916-5A2149774DBF/data/Containers/Data/Application/1039A6E0-E4C5-4F42-89F9-51F27F8975C8/Library/Caches/com.inyeoncurator.app/WebKit/ServiceWorkers'
+2026-11-14 08:19:29.077 Df Inyeon[5798:5c2d] [com.apple.WebKit:Sandbox] Successfully created a sandbox extension for '/Users/runner/Library/Developer/CoreSimulator/Devices/98A0BFA3-CEC3-4FD6-9916-5A2149774DBF/data/Containers/Data/Application/1039A6E0-E4C5-4F42-89F9-51F27F8975C8/Library/Caches/com.inyeoncurator.app/WebKit/AlternativeServices'
+2026-11-14 08:19:29.078 Df Inyeon[5798:5c2d] [com.apple.CFNetwork:Default] Initializing CFHTTPCookieStorage singleton
+2026-11-14 08:19:29.078 Df Inyeon[5798:5c2d] [com.apple.CFNetwork:Default] Creating default cookie storage with process/bundle identifier
+2026-11-14 08:19:29.080 Df Inyeon[5798:5c2d] [com.apple.network:] networkd_settings_read_from_file initialized networkd settings by reading plist directly
+2026-11-14 08:19:29.080 Df Inyeon[5798:5c2d] [com.apple.network:] networkd_settings_read_from_file initialized networkd settings by reading plist directly
+2026-11-14 08:19:29.080 Df Inyeon[5798:5c2d] [com.apple.WebKit:Sandbox] Successfully created a sandbox extension for '/Users/runner/Library/Developer/CoreSimulator/Devices/98A0BFA3-CEC3-4FD6-9916-5A2149774DBF/data/Containers/Data/Application/1039A6E0-E4C5-4F42-89F9-51F27F8975C8/Library/Cookies'
+2026-11-14 08:19:29.080 Df Inyeon[5798:5c2d] [com.apple.WebKit:Sandbox] Successfully created a sandbox extension for '/Users/runner/Library/Developer/CoreSimulator/Devices/98A0BFA3-CEC3-4FD6-9916-5A2149774DBF/data/Containers/Data/Application/1039A6E0-E4C5-4F42-89F9-51F27F8975C8/Library/Caches/com.apple.WebKit.Networking'
+2026-11-14 08:19:29.081 Df Inyeon[5798:5c2d] [com.apple.WebKit:Sandbox] Successfully created a sandbox extension for '/Users/runner/Library/Developer/CoreSimulator/Devices/98A0BFA3-CEC3-4FD6-9916-5A2149774DBF/data/Containers/Bundle/Application/880716DA-4AB3-4397-9A44-0C2469910373/Inyeon.app'
+2026-11-14 08:19:29.081 Df Inyeon[5798:5c4f] [com.apple.extensionkit:launch] Launching process with config: bundleID: com.apple.WebKit.Networking instance ID: Optional([_EXExtensionInstanceIdentifier: A65DD6EE-DD1B-4DEC-92E7-CCB786E43D29])
+2026-11-14 08:19:29.084 Df Inyeon[5798:5c2d] [com.apple.WebKit:ProcessSuspension] 0x1120e01e0 - [PID=0, throttler=0x112130190] ProcessThrottler::Activity::Activity: Starting foreground activity / 'Process initialization'
+2026-11-14 08:19:29.085 E  Inyeon[5798:5c4f] [com.apple.extensionkit:default] Failed to resolve host network app id to config: bundleID: com.apple.WebKit.Networking instance ID: Optional([_EXExtensionInstanceIdentifier: A65DD6EE-DD1B-4DEC-92E7-CCB786E43D29])
+2026-11-14 08:19:29.103 Df Inyeon[5798:5c2d] [com.apple.WebKit:ProcessSuspension] 0x112124100 - NavigationState is taking a process network assertion because a page load started
+2026-11-14 08:19:29.115 Df Inyeon[5798:5c2d] [com.apple.WebKit:ProcessSuspension] 0x1120e0240 - [PID=0, throttler=0x1120c8150] ProcessThrottler::Activity::Activity: Starting background activity / 'Page Load'
+2026-11-14 08:19:29.122 Df Inyeon[5798:5c75] [com.apple.UIKit:BackgroundTask] Ending background task with UIBackgroundTaskIdentifier: 2
+2026-11-14 08:19:29.123 Df Inyeon[5798:5c75] [com.apple.UIKit:BackgroundTask] Ending task with identifier 2 and description: <_UIBackgroundTaskInfo: 0x600001719900>: taskID = 2, taskName = Persistent SceneSession Map Update, creationTime = 443 (elapsed = 0), _expireHandler: <__NSGlobalBlock__: 0x1e61729e0>
+2026-11-14 08:19:29.123 Df Inyeon[5798:5c75] [com.apple.UIKit:BackgroundTask] Decrementing reference count for assertion <BKSProcessAssertion: 0x600002106d00> (used by background task with identifier 2: <_UIBackgroundTaskInfo: 0x600001719900>: taskID = 2, taskName = Persistent SceneSession Map Update, creationTime = 443 (elapsed = 0))
+2026-11-14 08:19:29.136 Df Inyeon[5798:5c2d] [com.apple.WebKit:ViewState] 0x1120bc100 - ApplicationStateTracker::setIsInBackground: 0
+2026-11-14 08:19:29.137 Df Inyeon[5798:5c2d] [com.apple.WebKit:ViewState] 0x1120bc100 - ApplicationStateTracker: add observers for scene
+2026-11-14 08:19:29.137 Df Inyeon[5798:5c2d] [com.apple.WebKit:ViewState] 0x10582f600 - WKApplicationStateTrackingView: View with page [0x106031a18, pageProxyID=8] was added to a window, _lastObservedStateWasBackground=0, isNowBackground=0
+2026-11-14 08:19:29.184 Df Inyeon[5798:5c2d] [com.apple.WebKit:ViewState] 0x106031a18 - [pageProxyID=8, webPageID=9, PID=0] WebPageProxy::updateActivityState: view visibility state changed 0 -> 1
+2026-11-14 08:19:29.202 Df Inyeon[5798:5c2d] [com.apple.BackBoard:Keyboard] Activating connection to server: (null)
+2026-11-14 08:19:29.202 Df Inyeon[5798:5c2d] [com.apple.BackBoard:Keyboard] server remote target <BSXPCServiceConnectionProxy<BKSKeyboardServiceClientToServerIPC>: 0x60000291cb60>
+2026-11-14 08:19:29.202 Df Inyeon[5798:5c2d] [com.apple.BackBoard:Keyboard] currently observing: YES
+2026-11-14 08:19:29.203 Df Inyeon[5798:5c2d] [com.apple.BackBoard:Keyboard] connected: (
+    "<BKSHIDKeyboardDevice: 0x600000232540> {\134n    senderID: 0xACEFADE00000003;\134n    transport: <nil>;\134n    language: <nil>;\134n    layout: US;\134n    countryCode: 0;\134n    standardType: 4294967295;\134n    subinterfaceID: 0;\134n    capsLockKeyHasLanguageSwitchLabel: NO;\134n    globeKeyLabelHasGlobeSymbol: NO;\134n}"
+)
+2026-11-14 08:19:29.203 Df Inyeon[5798:5c2d] [com.apple.BackBoard:Keyboard] currently observing: NO
+2026-11-14 08:19:29.204 Df Inyeon[5798:5c2d] [com.apple.BackBoard:Keyboard] disconnected: (
+    "<BKSHIDKeyboardDevice: 0x600000232540> {\134n    senderID: 0xACEFADE00000003;\134n    transport: <nil>;\134n    language: <nil>;\134n    layout: US;\134n    countryCode: 0;\134n    standardType: 4294967295;\134n    subinterfaceID: 0;\134n    capsLockKeyHasLanguageSwitchLabel: NO;\134n    globeKeyLabelHasGlobeSymbol: NO;\134n}"
+)
+2026-11-14 08:19:29.204 Df Inyeon[5798:5c2d] [com.apple.BackBoard:Keyboard] currently observing: YES
+2026-11-14 08:19:29.205 Df Inyeon[5798:5c2d] [com.apple.BackBoard:Keyboard] connected: (
+    "<BKSHIDKeyboardDevice: 0x600000232740> {\134n    senderID: 0xACEFADE00000003;\134n    transport: <nil>;\134n    language: <nil>;\134n    layout: US;\134n    countryCode: 0;\134n    standardType: 4294967295;\134n    subinterfaceID: 0;\134n    capsLockKeyHasLanguageSwitchLabel: NO;\134n    globeKeyLabelHasGlobeSymbol: NO;\134n}"
+)
+2026-11-14 08:19:29.206 Df Inyeon[5798:5c2d] [com.apple.BackBoard:Keyboard] currently observing: NO
+2026-11-14 08:19:29.206 Df Inyeon[5798:5c2d] [com.apple.BackBoard:Keyboard] disconnected: (
+    "<BKSHIDKeyboardDevice: 0x600000232740> {\134n    senderID: 0xACEFADE00000003;\134n    transport: <nil>;\134n    language: <nil>;\134n    layout: US;\134n    countryCode: 0;\134n    standardType: 4294967295;\134n    subinterfaceID: 0;\134n    capsLockKeyHasLanguageSwitchLabel: NO;\134n    globeKeyLabelHasGlobeSymbol: NO;\134n}"
+)
+2026-11-14 08:19:29.214 Df Inyeon[5798:5c2d] [com.apple.UIKit:HardwareKeyboard] -[UIApplication GSKeyboardForHWLayout:senderID:forceRebuild:createIfNeeded:], New hardware layout is created with US layout and 0 standardType.
+2026-11-14 08:19:29.215 Df Inyeon[5798:5c2d] [com.apple.BackBoard:Keyboard] currently observing: YES
+2026-11-14 08:19:29.216 Df Inyeon[5798:5c2d] [com.apple.BackBoard:Keyboard] connected: (
+    "<BKSHIDKeyboardDevice: 0x600000261a80> {\134n    senderID: 0xACEFADE00000003;\134n    transport: <nil>;\134n    language: <nil>;\134n    layout: US;\134n    countryCode: 0;\134n    standardType: 4294967295;\134n    subinterfaceID: 0;\134n    capsLockKeyHasLanguageSwitchLabel: NO;\134n    globeKeyLabelHasGlobeSymbol: NO;\134n}"
+)
+2026-11-14 08:19:29.216 Df Inyeon[5798:5c2d] [com.apple.BackBoard:Keyboard] currently observing: NO
+2026-11-14 08:19:29.216 Df Inyeon[5798:5c2d] [com.apple.BackBoard:Keyboard] disconnected: (
+    "<BKSHIDKeyboardDevice: 0x600000261a80> {\134n    senderID: 0xACEFADE00000003;\134n    transport: <nil>;\134n    language: <nil>;\134n    layout: US;\134n    countryCode: 0;\134n    standardType: 4294967295;\134n    subinterfaceID: 0;\134n    capsLockKeyHasLanguageSwitchLabel: NO;\134n    globeKeyLabelHasGlobeSymbol: NO;\134n}"
+)
+2026-11-14 08:19:29.216 Df Inyeon[5798:5c4b] [com.apple.runningboard:process] Starting death monitoring for handle [xpcservice<com.apple.WebKit.WebContent([app<com.inyeoncurator.app((null))>:5798])>{vt hash: 71395982}[uuid:1A06B41E-EF48-47AC-A149-E469D548D171]{definition:com.apple.WebKit.WebContent[extension][client]}:5818]
+2026-11-14 08:19:29.217 Df Inyeon[5798:5c2d] [com.apple.WebKit:ViewState] 0x106031a18 - [pageProxyID=8, webPageID=9, PID=0] WebPageProxy::viewIsBecomingVisible:
+2026-11-14 08:19:29.235 Df Inyeon[5798:5c2d] [com.apple.WebKit:ScreenTime] Screen Time has updated to use the system shield for any blocked URL.
+2026-11-14 08:19:29.235 Df Inyeon[5798:5c2d] [com.apple.WebKit:ProcessSuspension] 0x106031a18 - [pageProxyID=8, webPageID=9, PID=0] WebPageProxy::updateThrottleState: UIProcess is taking a foreground assertion because the view is visible
+2026-11-14 08:19:29.236 Df Inyeon[5798:5c2d] [com.apple.WebKit:ProcessSuspension] 0x1120e02a0 - [PID=0, throttler=0x1120c8150] ProcessThrottler::Activity::Activity: Starting foreground activity / 'View is visible'
+2026-11-14 08:19:29.237 Df Inyeon[5798:5c2d] [com.apple.WebKit:RemoteLayerTree] RemoteLayerTreeDrawingAreaProxy(11)::hideContentUntilAnyUpdate
+2026-11-14 08:19:29.238 Df Inyeon[5798:5c2d] [com.apple.WebKit:ViewState] 0x106022800 (pageProxyID=8) -[WKWebView _endLiveResize]
+2026-11-14 08:19:29.241 Df Inyeon[5798:5c2d] [com.apple.UIKit:Orientation] <UIWindowScene: 0x105308210> (D5D9DC22-046C-48A7-8559-AB9DEC2CDD29) Scene updated orientation preferences: none -> ( Pu )
+2026-11-14 08:19:29.249 Df Inyeon[5798:5c2d] [com.apple.UIKit:KeyWindow] Key window API is scene-level: YES
+2026-11-14 08:19:29.249 Df Inyeon[5798:5c2d] [com.apple.UIKit:KeyWindow] UIWindowScene: 0x105308210: Window became key in scene: UIWindow: 0x10530a990; contextId: 0x92170230: reason: UIWindowScene: 0x105308210: Window requested to become key in scene: 0x10530a990
+2026-11-14 08:19:29.249 Df Inyeon[5798:5c2d] [com.apple.UIKit:KeyWindow] Key window needs update: 1; currentKeyWindowScene: 0x0; evaluatedKeyWindowScene: 0x105308210; currentApplicationKeyWindow: 0x0; evaluatedApplicationKeyWindow: 0x10530a990; reason: UIWindowScene: 0x105308210: Window requested to become key in scene: 0x10530a990
+2026-11-14 08:19:29.249 Df Inyeon[5798:5c2d] [com.apple.UIKit:KeyWindow] Window did become application key: UIWindow: 0x10530a990; contextId: 0x92170230; scene identity: com.apple.frontboard.systemappservices/FBSceneManager:sceneID%3Acom.inyeoncurator.app-default
+2026-11-14 08:19:29.249 Df Inyeon[5798:5c2d] [com.apple.UIKit:EventDeferring] [0x600002910770] Begin local event deferring requested for token: 0x60000260f180; environments: 1; reason: UIWindowScene: 0x105308210: Begin event deferring in keyboardFocus for window: 0x10530a990
+2026-11-14 08:19:29.252 Df Inyeon[5798:5c2d] [com.apple.UIKit:Application] Deactivation reason removed: 10; deactivation reasons: 3104 -> 2080; animating application lifecycle event: 1
+2026-11-14 08:19:29.253 Df Inyeon[5798:5c2d] [com.apple.UIKit:Application] Deactivation reason added: 12; deactivation reasons: 2080 -> 6176; animating application lifecycle event: 1
+2026-11-14 08:19:29.253 Df Inyeon[5798:5c2d] [com.apple.UIKit:Application] Deactivation reason removed: 11; deactivation reasons: 6176 -> 4128; animating application lifecycle event: 1
+2026-11-14 08:19:29.254 Df Inyeon[5798:5c2d] [com.apple.FrontBoard:SceneExtension] Realizing settings extension <_UISceneIntelligenceSupportSettings> on FBSSceneSettings
+2026-11-14 08:19:29.257 Df Inyeon[5798:5c2d] [com.apple.UIKit:InterfaceStyle] Not push traits update to screen for new style 2, <UIWindowScene: 0x105308210> (D5D9DC22-046C-48A7-8559-AB9DEC2CDD29)
+2026-11-14 08:19:29.282 Df Inyeon[5798:5c74] [com.apple.BackBoard:EventDelivery] BKSHIDEventDeliveryManager - connection activation
+2026-11-14 08:19:29.304 Df Inyeon[5798:5c75] [com.apple.xpc:connection] [0x105211290] activating connection: mach=true listener=false peer=false name=com.apple.storekitd
+2026-11-14 08:19:29.350 Df Inyeon[5798:5c2d] [com.apple.network:activity] Create activity from XPC object <nw_activity 50:1 [5A84ECE0-F292-45C2-9D50-052D5A56BF6B] (reporting strategy default)>
+2026-11-14 08:19:29.350 Df Inyeon[5798:5c2d] [com.apple.network:activity] Create activity from XPC object <nw_activity 50:2 [C3F22B6D-5515-4F40-B3DC-79DD0A3F2ED2] (reporting strategy default)>
+2026-11-14 08:19:29.351 Df Inyeon[5798:5c2d] [com.apple.network:activity] Set activity <nw_activity 50:1 [5A84ECE0-F292-45C2-9D50-052D5A56BF6B] (reporting strategy default)> as the global parent
+2026-11-14 08:19:29.351 Df Inyeon[5798:5c2d] [com.apple.UIKit:BackgroundTask] Ending background task with UIBackgroundTaskIdentifier: 1
+2026-11-14 08:19:29.351 Df Inyeon[5798:5c2d] [com.apple.UIKit:BackgroundTask] Ending task with identifier 1 and description: <_UIBackgroundTaskInfo: 0x600001708380>: taskID = 1, taskName = Launch Background Task for Coalescing, creationTime = 443 (elapsed = 0), _expireHandler: (null)
+2026-11-14 08:19:29.352 Df Inyeon[5798:5c2d] [com.apple.UIKit:BackgroundTask] Decrementing reference count for assertion <BKSProcessAssertion: 0x600002106d00> (used by background task with identifier 1: <_UIBackgroundTaskInfo: 0x600001708380>: taskID = 1, taskName = Launch Background Task for Coalescing, creationTime = 443 (elapsed = 0))
+2026-11-14 08:19:29.352 Df Inyeon[5798:5c2d] [com.apple.UIKit:BackgroundTask] Will invalidate assertion: <BKSProcessAssertion: 0x600002106d00> for task identifier: 1
+2026-11-14 08:19:29.353 Df Inyeon[5798:5c2d] [com.apple.UIKit:EventBus] Event Timing Profile for Touch: not found, path="/System/Library/EventTimingProfiles/Sim.Touch.plist"
+2026-11-14 08:19:29.353 Df Inyeon[5798:5c2d] [com.apple.UIKit:EventBus] Event Timing Profile for Pencil: not found, path="/System/Library/EventTimingProfiles/Sim.Pencil.plist"
+2026-11-14 08:19:29.353 Df Inyeon[5798:5c2d] [com.apple.UIKit:UpdateScheduler] Target list changed: <CADisplay:LCD PurpleMain>
+2026-11-14 08:19:29.360 Df Inyeon[5798:5c2d] [com.apple.UIKit:AppLifecycle] sceneOfRecord: sceneID: sceneID:com.inyeoncurator.app-default  persistentID: D5D9DC22-046C-48A7-8559-AB9DEC2CDD29
+2026-11-14 08:19:29.361 Df Inyeon[5798:5c2d] [com.apple.UIKit:InterfaceStyle] Not push traits update to screen for new style 2, <UIWindowScene: 0x105308210> (D5D9DC22-046C-48A7-8559-AB9DEC2CDD29)
+2026-11-14 08:19:29.370 Df Inyeon[5798:5c2d] [com.apple.gamecontroller:Session] Creating the shared game controller session...
+2026-11-14 08:19:29.376 Sd Inyeon[5798:0] (79E72B83-2384-3A91-8EE7-4315E85E9A91) IOHIDManager State
+{
+    DispatchQueue = 0;
+    RunLoop = 1;
+    createOptions = 0;
+    isOpen = 0;
+    openOptions = 0;
+}
+2026-11-14 08:19:29.385 Df Inyeon[5798:5c2d] [com.apple.BackBoard:EventDelivery] policyStatus:<BKSHIDEventDeliveryPolicyObserver: 0x600002612340; process scope; status: target> was:none
+2026-11-14 08:19:29.385 A  Inyeon[5798:5c2d] (GameController) [GCDeviceSession] Activate
+2026-11-14 08:19:29.387 Df Inyeon[5798:5c2d] [com.apple.Accessibility:AXCommon] Read Per-App on Init: Smart invert = (null)
+2026-11-14 08:19:29.389 Df Inyeon[5798:5c2d] [com.apple.FrontBoard:SceneExtension] Realizing settings extension SBUISecureRenderingSettingsExtension on FBSSceneSettings
+2026-11-14 08:19:29.392 Df Inyeon[5798:5c2d] [com.apple.UIKit:InterfaceStyle] Not push traits update to screen for new style 2, <UIWindowScene: 0x105308210> (D5D9DC22-046C-48A7-8559-AB9DEC2CDD29)
+2026-11-14 08:19:29.393 Df Inyeon[5798:5c2d] [com.apple.UIKit:InterfaceStyle] Not push traits update to screen for new style 2, <UIWindowScene: 0x105308210> (D5D9DC22-046C-48A7-8559-AB9DEC2CDD29)
+2026-11-14 08:19:29.393 Df Inyeon[5798:5c2d] [com.apple.UIKit:AppLifecycle] sceneOfRecord: sceneID: sceneID:com.inyeoncurator.app-default  persistentID: D5D9DC22-046C-48A7-8559-AB9DEC2CDD29
+2026-11-14 08:19:29.393 Df Inyeon[5798:5c2d] [com.apple.UIKit:Application] Deactivation reason removed: 12; deactivation reasons: 4128 -> 32; animating application lifecycle event: 1
+2026-11-14 08:19:29.393 Df Inyeon[5798:5c2d] [com.apple.KeyboardArbiter:Client] Send setDeactivating: N (-DeactivationReason:SuspendedEventsOnly)
+2026-11-14 08:19:29.394 Df Inyeon[5798:5c2d] [com.apple.UIKit:Application] Deactivation reason removed: 5; deactivation reasons: 32 -> 0; animating application lifecycle event: 0
+2026-11-14 08:19:29.395 Df Inyeon[5798:5c2d] [com.apple.WebKit:Fullscreen] PlaybackSessionManagerProxy::applicationDidBecomeActive(2486452780)
+2026-11-14 08:19:29.396 A  Inyeon[5798:5c2d] (GameController) Notify ApplicationDidBecomeActive
+2026-11-14 08:19:29.430 Df Inyeon[5798:5c2d] [com.apple.gamecontroller:Session] Connected devices changed (2 added, 0 removed) -> [2] {(
+    <GCController 0x600003d08780 'MFi'/'Gamepad'>,
+    <GCKeyboard 0x600000264160 'Generic Keyboard'>
+)}
+2026-11-14 08:19:29.431 Df Inyeon[5798:5c2d] [com.apple.CoreAnalytics:client] No XPC connection in Simulator
+2026-11-14 08:19:29.433 Df Inyeon[5798:5c2d] [com.apple.gamecontroller:Session] Connected devices changed (0 added, 0 removed) -> [2] {(
+    <GCController 0x600003d08780 'MFi'/'Gamepad'>,
+    <GCKeyboard 0x600000264160 'Generic Keyboard'>
+)}
+2026-11-14 08:19:29.433 Df Inyeon[5798:5c2d] [com.apple.gamecontroller:Session] Connected devices changed (0 added, 0 removed) -> [2] {(
+    <GCController 0x600003d08780 'MFi'/'Gamepad'>,
+    <GCKeyboard 0x600000264160 'Generic Keyboard'>
+)}
+2026-11-14 08:19:29.433 A  Inyeon[5798:5c2d] (GameControllerFoundation) [HID Event System Client] Activate
+2026-11-14 08:19:29.435 A  Inyeon[5798:5c4d] (RunningBoardServices) didChangeInheritances
+2026-11-14 08:19:29.436 Df Inyeon[5798:5c2d] [com.apple.KeyboardArbiter:Client] startConnection
+2026-11-14 08:19:29.436 Df Inyeon[5798:5c2d] [com.apple.KeyboardArbiter:Client] handleKeyboardChange: set currentKeyboard:N (wasKeyboard:N)
+2026-11-14 08:19:29.441 Df Inyeon[5798:5c2d] [com.apple.UIKit:KeyboardArbiterClientLog] isWritingToolsHandlingKeyboardTracking:Y (WT ready:Y, Arbiter ready:Y)
+2026-11-14 08:19:29.442 Df Inyeon[5798:5c2d] [com.apple.UIKit:AppLifecycle] sceneOfRecord: sceneID: sceneID:com.inyeoncurator.app-default  persistentID: D5D9DC22-046C-48A7-8559-AB9DEC2CDD29
+2026-11-14 08:19:29.442 Df Inyeon[5798:5c2d] [com.apple.UIKit:InterfaceStyle] Scene did update interface style to 1, <UIWindowScene: 0x105308210> (D5D9DC22-046C-48A7-8559-AB9DEC2CDD29)
+2026-11-14 08:19:29.443 Df Inyeon[5798:5c2d] [com.apple.UIKit:InterfaceStyle] Push traits update to screen for new style 1, <UIWindowScene: 0x105308210> (D5D9DC22-046C-48A7-8559-AB9DEC2CDD29)
+2026-11-14 08:19:29.459 Df Inyeon[5798:5c75] [com.apple.BackBoard:EventDelivery] policyStatus:<BKSHIDEventDeliveryPolicyObserver: 0x600002609320; token: com.apple.frontboard.systemappservices/FBSceneManager:sceneID%3Acom.inyeoncurator.app-default; status: ancestor> was:target
+2026-11-14 08:19:29.470 Df Inyeon[5798:5c2d] [com.apple.UIKit:EventDeferring] [0x600002910770] Scene target of event deferring environments did update: scene: 0x105308210; current systemShellManagesKeyboardFocus: 1; systemShellManagesKeyboardFocusForScene: 1; eligibleForRecordRemoval: 1;
+2026-11-14 08:19:29.470 Df Inyeon[5798:5c2d] [com.apple.UIKit:KeyWindow] Scene became target of keyboard event deferring environment: UIWindowScene: 0x105308210; scene identity: com.apple.frontboard.systemappservices/FBSceneManager:sceneID%3Acom.inyeoncurator.app-default
+2026-11-14 08:19:29.482 Df Inyeon[5798:5c2d] [com.apple.network:activity] <nw_activity 50:1 [5A84ECE0-F292-45C2-9D50-052D5A56BF6B] (global parent) (reporting strategy default) complete (reason success)> complete with reason 2 (success), duration 2748ms
+2026-11-14 08:19:29.482 Df Inyeon[5798:5c2d] [com.apple.network:activity] <nw_activity 50:2 [C3F22B6D-5515-4F40-B3DC-79DD0A3F2ED2] (reporting strategy default) complete (reason success)> complete with reason 2 (success), duration 2748ms
+2026-11-14 08:19:29.482 Df Inyeon[5798:5c2d] [com.apple.network:activity] Unsetting the global parent activity <nw_activity 50:1 [5A84ECE0-F292-45C2-9D50-052D5A56BF6B] (global parent) (reporting strategy default) complete (reason success)>
+2026-11-14 08:19:29.482 Df Inyeon[5798:5c2d] [com.apple.network:activity] Unset the global parent activity
+2026-11-14 08:19:29.528 Df Inyeon[5798:5c4b] [com.apple.extensionkit:launch] Created new process ExtensionProcess: bundleID: com.apple.WebKit.WebContent instance ID: Optional([_EXExtensionInstanceIdentifier: 1A06B41E-EF48-47AC-A149-E469D548D171]) pid: 5818.
+2026-11-14 08:19:29.530 Df Inyeon[5798:5c4b] [com.apple.WebKit:Process] AssertionCapability::AssertionCapability: taking assertion Foreground
+2026-11-14 08:19:29.592 Df Inyeon[5798:5c2d] [com.apple.xpc:connection] [0x105208890] activating connection: mach=false listener=false peer=false name=(anonymous)
+2026-11-14 08:19:29.596 Df Inyeon[5798:5c75] [com.apple.xpc:connection] [0x10520e080] activating connection: mach=true listener=false peer=false name=com.apple.fontservicesd
+2026-11-14 08:19:29.609 Df Inyeon[5798:5c75] [com.apple.UIIntelligenceSupport:xpc] establishing connection to agent
+2026-11-14 08:19:29.618 Df Inyeon[5798:5c75] [com.apple.xpc:session] [0x600002110c30] Session created.
+2026-11-14 08:19:29.636 Df Inyeon[5798:5c75] [com.apple.xpc:session] [0x600002110c30] Session created from connection [0x104f1e610]
+2026-11-14 08:19:29.636 Df Inyeon[5798:5c75] [com.apple.xpc:connection] [0x104f1e610] activating connection: mach=true listener=false peer=false name=com.apple.uiintelligencesupport.agent
+2026-11-14 08:19:29.637 Df Inyeon[5798:5c75] [com.apple.xpc:session] [0x600002110c30] Session activated
+2026-11-14 08:19:29.645 E  Inyeon[5798:5c75] [com.apple.app_launch_measurement:General] Failed to send CA Event for app launch measurements for ca_event_type: 0 event_name: com.apple.app_launch_measurement.FirstFramePresentationMetric
+2026-11-14 08:19:29.671 A  Inyeon[5798:5c75] (CoreFoundation) Updating Key-Value Observers Of Preferences
+2026-11-14 08:19:29.681 E  Inyeon[5798:5c4a] [com.apple.app_launch_measurement:General] Failed to send CA Event for app launch measurements for ca_event_type: 1 event_name: com.apple.app_launch_measurement.ExtendedLaunchMetrics
+2026-11-14 08:19:29.700 Df Inyeon[5798:5c2d] (WebKit) WebContent[5818] Installed launch log hook
+2026-11-14 08:19:29.700 A  Inyeon[5798:5c75] (CoreFoundation) Updating Key-Value Observers Of Preferences
+2026-11-14 08:19:29.711 Df Inyeon[5798:5c2d] [com.apple.WebKit:Process] 0x1120c80c0 - [PID=5818] WebProcessProxy::didFinishLaunching:
+2026-11-14 08:19:29.712 Df Inyeon[5798:5c2d] [com.apple.WebKit:ProcessSuspension] 0x1120c8150 - [PID=5818] ProcessThrottler::didConnectToProcess
+2026-11-14 08:19:29.712 Df Inyeon[5798:5c2d] [com.apple.WebKit:ProcessSuspension] 0x1120c8150 - [PID=5818] ProcessThrottler::setThrottleState: Updating process assertion type to 3 (foregroundActivities=3, backgroundActivities=5)
+2026-11-14 08:19:29.713 Df Inyeon[5798:5c2d] [com.apple.WebKit:Process] AssertionCapability::AssertionCapability: taking assertion Foreground
+2026-11-14 08:19:29.720 Df Inyeon[5798:5c2d] [com.apple.WebKit:ProcessSuspension] 0x60000173d7c0 - WKProcessAssertionBackgroundTaskManager: beginBackgroundTaskWithName
+2026-11-14 08:19:29.720 Df Inyeon[5798:5c2d] [com.apple.WebKit:ProcessSuspension] WKProcessAssertionBackgroundTaskManager: Took a FinishTaskInterruptable assertion for own process
+2026-11-14 08:19:29.721 Df Inyeon[5798:5c2d] [com.apple.WebKit:ProcessSuspension] 0x1120c80c0 - [PID=5818] WebProcessProxy::didChangeThrottleState: type=2
+2026-11-14 08:19:29.721 Df Inyeon[5798:5c2d] [com.apple.WebKit:ProcessSuspension] 0x1120c80c0 - [PID=5818] WebProcessProxy::didChangeThrottleState(Foreground) Taking foreground assertion for network process
+2026-11-14 08:19:29.721 Df Inyeon[5798:5c2d] [com.apple.WebKit:ProcessSuspension] 0x1120e0300 - [PID=0, throttler=0x112130190] ProcessThrottler::Activity::Activity: Starting foreground activity / 'Networking for foreground view(s)'
+2026-11-14 08:19:29.721 Df Inyeon[5798:5c2d] [com.apple.WebKit:ProcessSuspension] 0x1120e0330 - [PID=0, throttler=0x112108270] ProcessThrottler::Activity::Activity: Starting foreground activity / 'GPU for foreground view(s)'
+2026-11-14 08:19:29.722 Df Inyeon[5798:5c2d] [com.apple.WebKit:Process] 0x112130100 - NetworkProcessProxy::sendXPCEndpointToProcess(0x1120c80c0) state = 1 has connection = 1 XPC endpoint message = 0x0
+2026-11-14 08:19:29.723 Df Inyeon[5798:5c4d] [com.apple.WebKit:ProcessSuspension] 0x1121580c0 - ProcessAssertion::acquireSync Trying to take RBS assertion 'WebProcess Foreground Assertion' for process with PID=5818
+2026-11-14 08:19:29.725 A  Inyeon[5798:5c75] (CoreFoundation) Updating Key-Value Observers Of Preferences
+2026-11-14 08:19:29.746 A  Inyeon[5798:5c75] (CoreFoundation) Updating Key-Value Observers Of Preferences
+2026-11-14 08:19:29.751 A  Inyeon[5798:5c75] (CoreFoundation) Updating Key-Value Observers Of Preferences
+2026-11-14 08:19:29.754 A  Inyeon[5798:5c75] (CoreFoundation) Updating Key-Value Observers Of Preferences
+2026-11-14 08:19:29.756 A  Inyeon[5798:5c75] (CoreFoundation) Updating Key-Value Observers Of Preferences
+2026-11-14 08:19:29.758 A  Inyeon[5798:5c75] (CoreFoundation) Updating Key-Value Observers Of Preferences
+2026-11-14 08:19:29.759 A  Inyeon[5798:5c75] (CoreFoundation) Updating Key-Value Observers Of Preferences
+2026-11-14 08:19:29.766 A  Inyeon[5798:5c75] (CoreFoundation) Updating Key-Value Observers Of Preferences
+2026-11-14 08:19:29.769 A  Inyeon[5798:5c75] (CoreFoundation) Updating Key-Value Observers Of Preferences
+2026-11-14 08:19:29.775 Df Inyeon[5798:5c4d] [com.apple.WebKit:ProcessSuspension] 0x1121580c0 - ProcessAssertion() Successfully granted capability
+2026-11-14 08:19:29.795 Df Inyeon[5798:5c51] [com.apple.runningboard:process] Starting death monitoring for handle [xpcservice<com.apple.WebKit.GPU([app<com.inyeoncurator.app((null))>:5798])>{vt hash: 223737757}[uuid:9CC2FCF7-1908-4927-8776-34E76EB70B0D]{definition:com.apple.WebKit.GPU[extension][client]}:5819]
+2026-11-14 08:19:29.808 Df Inyeon[5798:5c51] [com.apple.extensionkit:launch] Created new process ExtensionProcess: bundleID: com.apple.WebKit.GPU instance ID: Optional([_EXExtensionInstanceIdentifier: 9CC2FCF7-1908-4927-8776-34E76EB70B0D]) pid: 5819.
+2026-11-14 08:19:29.808 Df Inyeon[5798:5c51] [com.apple.WebKit:Process] AssertionCapability::AssertionCapability: taking assertion Foreground
+2026-11-14 08:19:29.810 Df Inyeon[5798:5c2d] [com.apple.xpc:connection] [0x105215aa0] activating connection: mach=false listener=false peer=false name=(anonymous)
+2026-11-14 08:19:29.828 Df Inyeon[5798:5c2d] [com.apple.WebKit:Process] WebContent[5818] getNetworkProcessConnection: Request connection for core identifier 2
+2026-11-14 08:19:29.829 Df Inyeon[5798:5c2d] [com.apple.WebKit:ProcessSuspension] 0x1120e00c0 - [PID=5818, throttler=0x1120c8150] ProcessThrottler::Activity::invalidate: Ending foreground activity / 'Process initialization'
+2026-11-14 08:19:29.829 Df Inyeon[5798:5c2d] [com.apple.WebKit:ProcessSuspension] 0x112130100 - NetworkProcessProxy::getNetworkProcessConnection: Taking a background assertion because web process pid 5818 (core identifier 2) is requesting a connection
+2026-11-14 08:19:29.910 A  Inyeon[5798:5c4b] (RunningBoardServices) didChangeInheritances
+2026-11-14 08:19:30.099 Df Inyeon[5798:5c2d] [com.apple.WebKit:Process] 0x1121081e0 - GPUProcessProxy::didFinishLaunching:
+2026-11-14 08:19:30.099 F  Inyeon[5798:5c2d] [com.apple.WebKit:Process] GPU process (0x1121081e0) took 1.096245 seconds to launch
+2026-11-14 08:19:30.099 A  Inyeon[5798:5c2d] (libsystem_trace.dylib) Activity for state dumps
+2026-11-14 08:19:30.100 Df Inyeon[5798:5c2d] [com.apple.WebKit:Process] 0x1121081e0 - GPUProcessProxy::connectionWillOpen:
+2026-11-14 08:19:30.100 Df Inyeon[5798:5c2d] [com.apple.WebKit:ProcessSuspension] 0x112108270 - [PID=5819] ProcessThrottler::didConnectToProcess
+2026-11-14 08:19:30.100 Df Inyeon[5798:5c2d] [com.apple.WebKit:ProcessSuspension] 0x112108270 - [PID=5819] ProcessThrottler::setThrottleState: Updating process assertion type to 3 (foregroundActivities=2, backgroundActivities=1)
+2026-11-14 08:19:30.100 Df Inyeon[5798:5c2d] [com.apple.WebKit:Process] AssertionCapability::AssertionCapability: taking assertion Foreground
+2026-11-14 08:19:30.100 Df Inyeon[5798:5c2d] [com.apple.WebKit:Process] 0x112130100 - NetworkProcessProxy::sendXPCEndpointToProcess(0x1121081e0) state = 1 has connection = 1 XPC endpoint message = 0x0
+2026-11-14 08:19:30.100 Sd Inyeon[5798:0] (79E72B83-2384-3A91-8EE7-4315E85E9A91) IOHIDManager State
+{
+    DispatchQueue = 0;
+    RunLoop = 1;
+    createOptions = 0;
+    isOpen = 0;
+    openOptions = 0;
+}
+2026-11-14 08:19:30.100 Df Inyeon[5798:5c75] [com.apple.WebKit:ProcessSuspension] 0x112158180 - ProcessAssertion::acquireSync Trying to take RBS assertion 'GPUProcess Foreground Assertion' for process with PID=5819
+2026-11-14 08:19:30.101 A  Inyeon[5798:5c4b] (CoreServicesInternal) CFURLCreateBookmarkData
+2026-11-14 08:19:30.103 Df Inyeon[5798:5c75] [com.apple.WebKit:ProcessSuspension] 0x112158180 - ProcessAssertion() Successfully granted capability
+2026-11-14 08:19:30.149 Df Inyeon[5798:5c4f] [com.apple.runningboard:process] Starting death monitoring for handle [xpcservice<com.apple.WebKit.Networking([app<com.inyeoncurator.app((null))>:5798])>{vt hash: 114736818}[uuid:A65DD6EE-DD1B-4DEC-92E7-CCB786E43D29]{definition:com.apple.WebKit.Networking[extension][client]}:5821]
+2026-11-14 08:19:30.161 Df Inyeon[5798:5c4f] [com.apple.extensionkit:launch] Created new process ExtensionProcess: bundleID: com.apple.WebKit.Networking instance ID: Optional([_EXExtensionInstanceIdentifier: A65DD6EE-DD1B-4DEC-92E7-CCB786E43D29]) pid: 5821.
+2026-11-14 08:19:30.161 Df Inyeon[5798:5c75] [com.apple.WebKit:Process] AssertionCapability::AssertionCapability: taking assertion Foreground
+2026-11-14 08:19:30.162 Df Inyeon[5798:5c2d] [com.apple.xpc:connection] [0x1053124b0] activating connection: mach=false listener=false peer=false name=(anonymous)
+2026-11-14 08:19:30.198 Df Inyeon[5798:5c2d] [com.apple.WebKit:ProcessSuspension] 0x1120e0120 - [PID=5819, throttler=0x112108270] ProcessThrottler::Activity::invalidate: Ending foreground activity / 'Process initialization'
+2026-11-14 08:19:30.474 Df Inyeon[5798:5c2d] [com.apple.WebKit:Process] 0x112130100 - NetworkProcessProxy::didFinishLaunching
+2026-11-14 08:19:30.474 F  Inyeon[5798:5c2d] [com.apple.WebKit:Process] Networking process (0x112130100) took 1.397936 seconds to launch
+2026-11-14 08:19:30.474 A  Inyeon[5798:5c2d] (libsystem_trace.dylib) Activity for state dumps
+2026-11-14 08:19:30.474 Df Inyeon[5798:5c2d] [com.apple.WebKit:ProcessSuspension] 0x112130190 - [PID=5821] ProcessThrottler::didConnectToProcess
+2026-11-14 08:19:30.474 Df Inyeon[5798:5c2d] [com.apple.WebKit:ProcessSuspension] 0x112130190 - [PID=5821] ProcessThrottler::setThrottleState: Updating process assertion type to 3 (foregroundActivities=2, backgroundActivities=2)
+2026-11-14 08:19:30.475 Df Inyeon[5798:5c2d] [com.apple.WebKit:Process] AssertionCapability::AssertionCapability: taking assertion Foreground
+2026-11-14 08:19:30.475 Df Inyeon[5798:5c75] [com.apple.WebKit:ProcessSuspension] 0x112158240 - ProcessAssertion::acquireSync Trying to take RBS assertion 'NetworkProcess Foreground Assertion' for process with PID=5821
+2026-11-14 08:19:30.476 Df Inyeon[5798:5c75] [com.apple.WebKit:ProcessSuspension] 0x112158240 - ProcessAssertion() Successfully granted capability
+2026-11-14 08:19:30.483 Df Inyeon[5798:5c2d] [com.apple.WebKit:Process] 0x112130100 - NetworkProcessProxy::sendXPCEndpointToProcess(0x1120c80c0) state = 1 has connection = 1 XPC endpoint message = 0x600003e16600
+2026-11-14 08:19:30.483 Df Inyeon[5798:5c2d] [com.apple.WebKit:Process] 0x112130100 - NetworkProcessProxy::sendXPCEndpointToProcess(0x1121081e0) state = 1 has connection = 1 XPC endpoint message = 0x600003e16600
+2026-11-14 08:19:30.484 Df Inyeon[5798:5c2d] [com.apple.xpc:connection] WebContent[5818] [0x100b073a0] activating connection: mach=false listener=false peer=false name=(anonymous)
+2026-11-14 08:19:30.551 Df Inyeon[5798:5c2d] [com.apple.WebKit:ProcessSuspension] 0x1120e01e0 - [PID=5821, throttler=0x112130190] ProcessThrottler::Activity::invalidate: Ending foreground activity / 'Process initialization'
+2026-11-14 08:19:30.562 Df Inyeon[5798:5c2d] [com.apple.WebKit:Loading] WebContent[5818] Received Launch Services database
+2026-11-14 08:19:30.590 Df Inyeon[5798:5c2d] [com.apple.WebKit:Process] WebContent[5818] 0x10c060150 - [sessionID=1] WebProcess::initializeLogForwarding: Debug logging enabled: 0
+2026-11-14 08:19:30.590 Df Inyeon[5798:5c2d] [com.apple.WebKit:Process] WebContent[5818] WebProcess::platformInitializeWebProcess
+2026-11-14 08:19:30.596 Df Inyeon[5798:5c2d] [com.apple.xpc:connection] WebContent[5818] [0x100c05b50] activating connection: mach=false listener=true peer=false name=(anonymous)
+2026-11-14 08:19:30.596 Df Inyeon[5798:5c2d] [com.apple.xpc:connection] WebContent[5818] [0x100c05b50] Connection returned listener port: 0x3a03
+2026-11-14 08:19:30.596 Df Inyeon[5798:5c2d] [com.apple.xpc:connection] WebContent[5818] [0x100c05c90] activating connection: mach=false listener=false peer=false name=(anonymous)
+2026-11-14 08:19:30.596 Df Inyeon[5798:5c2d] [com.apple.xpc:connection] WebContent[5818] [0x100c05dd0] activating connection: mach=false listener=false peer=true name=com.apple.xpc.anonymous.0x100c05b50.peer[5818].0x100c05dd0
+2026-11-14 08:19:30.676 Df Inyeon[5798:5c2d] [com.apple.Accessibility:AXSupportCommon] WebContent[5818] Application accessibility enabled: 0, (
+	0   libAccessibility.dylib              0x000000019215585c _AXSApplicationAccessibilitySetEnabled + 76
+	1   WebKit                              0x000000018e01aa24 _ZN6WebKit10WebProcess28platformInitializeWebProcessERNS_28WebProcessCreationParametersE + 2096
+	2   WebKit                              0x000000018e1fcc94 _ZN6WebKit10WebProcess20initializeWebProcessEONS_28WebProcessCreationParametersEON3WTF17CompletionHandlerIFvN7WebCore15ProcessIdentityEEEE + 188
+	3   WebKit                              0x000000018db9b684 _ZN3IPC18handleMessageAsyncIN8Messages10WebProcess20InitializeWebProcessENS_10ConnectionEN6WebKit10WebProcessES6_FvONS5_28WebProcessCreationParametersEON3WTF17CompletionHandlerIFvN7WebCore15ProcessIdentityEEEEEEEvRT0_RNS_7DecoderEPT1_MT2_T3_ + 224
+	4   WebKit                              0x000000018e5c03cc _ZN3IPC10Connection15dispatchMessageEN3WTF9UniqueRefINS_7DecoderEEE + 556
+	5   WebKit                              0x000000018e5db49c _Z<…>
+2026-11-14 08:19:30.676 Df Inyeon[5798:5c2d] [com.apple.Accessibility:AXSupportCommon] WebContent[5818] Stored App AX setting: 0
+2026-11-14 08:19:30.681 Df Inyeon[5798:5c2d] [com.apple.Accessibility:AXSupportCommon] WebContent[5818] AXS AccessibilityEnabled: (app ax: 0), ax settings: 0, cached: 0
+2026-11-14 08:19:30.690 Df Inyeon[5798:5c4f] [com.apple.xpc:connection] [0x105208890] Re-initialization successful; calling out to event handler with XPC_ERROR_CONNECTION_INTERRUPTED
+2026-11-14 08:19:31.379 Df Inyeon[5798:5c2d] [com.apple.WebKit:Loading] 0x106031a18 - [pageProxyID=8, webPageID=9, PID=5818] WebPageProxy::decidePolicyForNavigationAction: frameID=4294967297, isMainFrame=1, navigationID=14
+2026-11-14 08:19:31.385 A  Inyeon[5798:5c75] (CoreFoundation) Loading Preferences From User Session CFPrefsD
+2026-11-14 08:19:31.386 Df Inyeon[5798:5c75] [com.apple.xpc:connection] [0x105216230] activating connection: mach=true listener=false peer=false name=com.apple.Safari.SafeBrowsing.Service
+2026-11-14 08:19:31.390 Df Inyeon[5798:5c2d] [com.apple.WebKit:AppSSO] 0x11207c0c0 - SOAuthorizationCoordinator::tryAuthorize
+2026-11-14 08:19:31.399 Df Inyeon[5798:5ca2] [com.apple.WebKit:RemoteLayerBuffers] WebContent[5818]: [renderingBackend=11] Created rendering backend for pageProxyID=8, webPageID=9
+2026-11-14 08:19:31.409 Df Inyeon[5798:5ca2] [com.apple.WebKit:Process] WebContent[5818] GPUProcessConnection::create - 0x10c0ba140
+2026-11-14 08:19:31.409 A  Inyeon[5798:5c2d] (AppSSO) canPerformAuthorizationWithURL
+2026-11-14 08:19:31.419 A  Inyeon[5798:5c2d] (AppSSOCore) canPerformAuthorizationWithURL
+2026-11-14 08:19:31.425 Df Inyeon[5798:5c2d] [com.apple.authkit:nto] Fetching native takeover URLs
+2026-11-14 08:19:31.429 Df Inyeon[5798:5c2d] [com.apple.xpc:connection] [0x10521b4e0] activating connection: mach=true listener=false peer=false name=com.apple.ak.authorizationservices.xpc
+2026-11-14 08:19:31.432 Df Inyeon[5798:5c2d] [com.apple.WebKit:Sandbox] Successfully created a sandbox extension for '/Users/runner/Library/Developer/CoreSimulator/Devices/98A0BFA3-CEC3-4FD6-9916-5A2149774DBF/data/Containers/Data/Application/1039A6E0-E4C5-4F42-89F9-51F27F8975C8/tmp/com.inyeoncurator.app/WebKit/MediaCache'
+2026-11-14 08:19:31.433 Df Inyeon[5798:5c2d] [com.apple.WebKit:Sandbox] Successfully created a sandbox extension for '/Users/runner/Library/Developer/CoreSimulator/Devices/98A0BFA3-CEC3-4FD6-9916-5A2149774DBF/data/Containers/Data/Application/1039A6E0-E4C5-4F42-89F9-51F27F8975C8/Library/WebKit/com.inyeoncurator.app/WebsiteData/MediaKeys/v1'
+2026-11-14 08:19:31.433 Df Inyeon[5798:5c2d] [com.apple.WebKit:ProcessSuspension] 0x1121081e0 - GPUProcessProxy is taking a background assertion because a web process is requesting a connection
+2026-11-14 08:19:31.451 Df Inyeon[5798:5c75] [com.apple.authkit:nto] URL shouldn't be processed
+2026-11-14 08:19:31.451 Df Inyeon[5798:5c75] [com.apple.AppSSO:SOConfigurationClient] -[SOConfigurationClient init]  on <SOConfigurationClient: 0x60000026ea20>
+2026-11-14 08:19:31.452 Df Inyeon[5798:5c75] [com.apple.xpc:connection] [0x104f0c7e0] activating connection: mach=true listener=false peer=false name=com.apple.AppSSO.service-xpc
+2026-11-14 08:19:31.453 Df Inyeon[5798:5c75] [com.apple.AppSSO:SOServiceConnection] <SOServiceConnection: 0x6000002646a0>: new XPC connection
+2026-11-14 08:19:31.455 Df Inyeon[5798:5c4f] [com.apple.AppSSO:SOConfigurationClient] -[SOConfigurationClient _reloadConfig]  on <SOConfigurationClient: 0x60000026ea20>
+2026-11-14 08:19:31.455 Df Inyeon[5798:5c4f] [com.apple.AppSSO:SOClient] -[SOClient configurationWithCompletion:]  on <SOClient: 0x600000008550>
+2026-11-14 08:19:31.636 Df Inyeon[5798:5c2d] [com.apple.WebKit:Process] 0x1121081e0 - GPUProcessProxy::didCreateContextForVisibilityPropagation: webPageProxyID: 8, pagePID: 9, contextID: 3
+2026-11-14 08:19:31.638 Df Inyeon[5798:5c2d] [com.apple.WebKit:Process] Created visibility propagation interaction <_UIVisibilityPropagationInteraction: 0x6000026109c0> for process with PID=5819
+2026-11-14 08:19:31.658 Df Inyeon[5798:5ca2] [com.apple.WebKit:Process] WebContent[5818] 0x10c0ba140 - GPUProcessConnection::didInitialize
+2026-11-14 08:19:32.557 Df Inyeon[5798:5c2d] [com.apple.WebKit:RemoteLayerTree] RemoteLayerTreeDrawingAreaProxy(11) Unhiding layer tree
+2026-11-14 08:19:32.675 Df Inyeon[5798:5c4f] [com.apple.AppSSO:SOClient] configurationWithCompletion: success = YES, error = (null)
+2026-11-14 08:19:32.678 Df Inyeon[5798:5c2d] [com.apple.WebKit:AppSSO] SOAuthorizationCoordinator::tryAuthorize: The requested URL is not registered for AppSSO handling. No further action needed.
+2026-11-14 08:19:33.788 E  Inyeon[5798:5c2d] [com.apple.WebKit:ResourceLoadStatistics] Failed to request storage access quirks from WebPrivacy.
+2026-11-14 08:19:33.788 E  Inyeon[5798:5c2d] [com.apple.WebKit:ResourceLoadStatistics] Failed to request known fingerprinting scripts from WebPrivacy: Error Domain=WebPrivacyErrorDomain Code=1001 "List data not found" UserInfo={NSLocalizedDescription=List data not found}
+2026-11-14 08:19:33.788 E  Inyeon[5798:5c2d] [com.apple.WebKit:ResourceLoadStatistics] Failed to request storage access user agent string quirks from WebPrivacy.
+2026-11-14 08:19:33.790 E  Inyeon[5798:5c2d] [com.apple.WebKit:ResourceLoadStatistics] Failed to request query parameters from WebPrivacy.
+2026-11-14 08:19:33.790 Df Inyeon[5798:5c2d] [com.apple.WebKit:Loading] 0x106031a18 - [pageProxyID=8, webPageID=9, PID=5818] WebPageProxy::decidePolicyForNavigationAction: listener called: frameID=4294967297, isMainFrame=1, navigationID=14, policyAction=Use, isAppBoundDomain=0, wasNavigationIntercepted=0
+2026-11-14 08:19:33.790 Df Inyeon[5798:5c2d] [com.apple.WebKit:Loading] 0x106031a18 - [pageProxyID=8, webPageID=9, PID=5818] WebPageProxy::receivedNavigationActionPolicyDecision: frameID=4294967297, isMainFrame=1, navigationID=14, policyAction=Use
+2026-11-14 08:19:33.796 Df Inyeon[5798:5c2d] [com.apple.WebKit:ProcessSwapping] 0x106031a18 - [pageProxyID=8, webPageID=9, PID=5818] WebPageProxy::decidePolicyForNavigationAction: keep using process 5818 for navigation, reason=Process has not yet committed any provisional loads
+2026-11-14 08:19:33.796 Df Inyeon[5798:5c2d] [com.apple.WebKit:Process] 0x1120c80c0 - [PID=5818] WebProcessProxy::canTerminateAuxiliaryProcess: returns false (pageCount=1, provisionalPageCount=0, suspendedPageCount=0, m_isInProcessCache=0, m_shutdownPreventingScopeCounter=0)
+2026-11-14 08:19:33.796 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webFrameID=4294967297, webPageID=9] WebFrameLoaderClient::dispatchDecidePolicyForNavigationAction: Got policyAction Use from async IPC
+2026-11-14 08:19:33.796 Df Inyeon[5798:5ca2] [com.apple.WebKit:Loading] WebContent[5818] 0x10c0807e0 - [pageID=9, frameID=4294967297] PolicyChecker::checkNavigationPolicy: continuing because this policyAction from dispatchDecidePolicyForNavigationAction is Use
+2026-11-14 08:19:33.797 Df Inyeon[5798:5ca2] [com.apple.WebKit:ResourceLoading] WebContent[5818]: [pageID=9 frameID=4294967297 isMainFrame=1] FrameLoader::stopAllLoaders: m_provisionalDocumentLoader=0, m_documentLoader=4514017280
+2026-11-14 08:19:33.797 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [pageID=9, frameID=4294967297, isMainFrame=1] DocumentLoader::stopLoading
+2026-11-14 08:19:33.797 Df Inyeon[5798:5ca2] [com.apple.WebKit:ResourceLoading] WebContent[5818]: [pageID=9 frameID=4294967297 isMainFrame=1] FrameLoader::setProvisionalDocumentLoader: Setting provisional document loader to 4514021376 (was 0)
+2026-11-14 08:19:33.797 Df Inyeon[5798:5ca2] [com.apple.WebKit:ResourceLoading] WebContent[5818]: [pageID=9 frameID=4294967297 isMainFrame=1] FrameLoader::continueLoadAfterNavigationPolicy: Setting provisional document loader (m_provisionalDocumentLoader=4514021376)
+2026-11-14 08:19:33.797 Df Inyeon[5798:5ca2] [com.apple.WebKit:ProcessSuspension] WebContent[5818]: [webPageID=9] WebPage::freezeLayerTree: Adding a reason to freeze layer tree (reason=1, new=1, old=0)
+2026-11-14 08:19:33.797 Df Inyeon[5798:5ca2] [com.apple.WebKit:ResourceLoading] WebContent[5818]: [pageID=9 frameID=4294967297 isMainFrame=1] FrameLoader::setPolicyDocumentLoader: Setting policy document loader to 0 (was 4514021376)
+2026-11-14 08:19:33.797 Df Inyeon[5798:5ca2] [com.apple.WebKit:ResourceLoading] WebContent[5818]: [pageID=9 frameID=4294967297 isMainFrame=1] FrameLoader::prepareForLoadStart: Starting frame load
+2026-11-14 08:19:33.797 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: ProgressTracker::progressStarted: frameID 4294967297, value 0.100000, tracked frames 1, originating frameID 4294967297, isMainLoad 1
+2026-11-14 08:19:33.798 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [pageID=9, frameID=4294967297, isMainFrame=1] DocumentLoader::startLoadingMainResource: Starting load
+2026-11-14 08:19:33.798 Df Inyeon[5798:5c2d] [com.apple.WebKit:Loading] 0x106031a18 - [pageProxyID=8, webPageID=9, PID=5818] WebPageProxy::didStartProvisionalLoadForFrame: frameID=4294967297, isMainFrame=1
+2026-11-14 08:19:33.798 Df Inyeon[5798:5c2d] [com.apple.WebKit:Loading] 0x1120c80c0 - [PID=5818] WebProcessProxy::didStartProvisionalLoadForMainFrame:
+2026-11-14 08:19:33.802 E  Inyeon[5798:5ca2] [com.apple.WebKit:ResourceLoadStatistics] WebContent[5818] Unable to filter tracking query parameters (missing data)
+2026-11-14 08:19:33.810 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [pageID=9, frameID=4294967297, resourceID=18] ResourceLoader::willSendRequestInternal: calling completion handler
+2026-11-14 08:19:33.810 Df Inyeon[5798:5ca2] [com.apple.WebKit:ResourceLoading] WebContent[5818]: [pageID=9, frameID=4294967297, resourceID=18 SubResourceLoader::willSendRequestInternal: resource load finished; calling completion handler
+2026-11-14 08:19:33.811 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webPageID=9, frameID=9, resourceID=9] WebLoaderStrategy::scheduleLoad: URL will be scheduled with the NetworkProcess
+2026-11-14 08:19:33.813 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webPageID=9, frameID=9, resourceID=9] WebLoaderStrategy::scheduleLoad: Resource is being scheduled with the NetworkProcess (priority=4, existingNetworkResourceLoadIdentifierToResume=0)
+2026-11-14 08:19:33.813 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webPageID=9, frameID=4294967297, resourceID=18] WebResourceLoader::WebResourceLoader
+2026-11-14 08:19:33.936 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webPageID=9, frameID=4294967297, resourceID=18] WebResourceLoader::didReceiveResponse: (httpStatusCode=200)
+2026-11-14 08:19:35.112 Df Inyeon[5798:5c4d] [com.apple.Safari.SafeBrowsing:Database] Service did finish database update with protection type 1 and provider 1
+2026-11-14 08:19:35.112 Df Inyeon[5798:5c4d] [com.apple.Safari.SafeBrowsing:Database] Service did finish database update with protection type 1 and provider 1
+2026-11-14 08:19:35.277 Df Inyeon[5798:5c2d] [com.apple.WebKit:ResourceLoadStatistics] StorageAccessPromptQuirkController::didUpdateCachedListData: Loaded 1 storage access prompt(s) quirks from WebPrivacy.
+2026-11-14 08:19:41.516 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webPageID=9, frameID=4294967297, resourceID=18] WebResourceLoader::didReceiveData: Started receiving data
+2026-11-14 08:19:41.518 Df Inyeon[5798:5ca2] [com.apple.WebKit:ResourceLoading] WebContent[5818]: [pageID=9 frameID=4294967297 isMainFrame=1] FrameLoader::setDocumentLoader: Setting document loader to 4514021376 (was 4514017280)
+2026-11-14 08:19:41.519 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [pageID=9, frameID=4294967297, isMainFrame=1] DocumentLoader::detachFromFrame
+2026-11-14 08:19:41.519 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [pageID=9, frameID=4294967297, isMainFrame=1] DocumentLoader::stopLoading
+2026-11-14 08:19:41.519 Df Inyeon[5798:5ca2] [com.apple.WebKit:ResourceLoading] WebContent[5818]: [pageID=9 frameID=4294967297 isMainFrame=1] FrameLoader::transitionToCommitted: Clearing provisional document loader (m_provisionalDocumentLoader=4514021376)
+2026-11-14 08:19:41.519 Df Inyeon[5798:5ca2] [com.apple.WebKit:ResourceLoading] WebContent[5818]: [pageID=9 frameID=4294967297 isMainFrame=1] FrameLoader::setProvisionalDocumentLoader: Setting provisional document loader to 0 (was 4514021376)
+2026-11-14 08:19:41.525 Df Inyeon[5798:5c2d] [com.apple.WebKit:Loading] 0x106031a18 - [pageProxyID=8, webPageID=9, PID=5818] WebPageProxy::didNavigateWithNavigationDataShared:
+2026-11-14 08:19:41.530 E  Inyeon[5798:5ca2] [com.apple.WebKit:ResourceLoadStatistics] WebContent[5818] Unable to hide query parameters from script (missing data)
+2026-11-14 08:19:41.530 Df Inyeon[5798:5ca2] [com.apple.WebKit:ProcessSuspension] WebContent[5818]: [webPageID=9] WebPage::unfreezeLayerTree: Removing a reason to freeze layer tree (reason=128, new=1, old=1)
+2026-11-14 08:19:41.530 Df Inyeon[5798:5ca2] [com.apple.WebKit:ProcessSuspension] WebContent[5818]: [webPageID=9] WebPage::unfreezeLayerTree: Removing a reason to freeze layer tree (reason=128, new=1, old=1)
+2026-11-14 08:19:41.538 Df Inyeon[5798:5c2d] [com.apple.WebKit:Loading] 0x106031a18 - [pageProxyID=8, webPageID=9, PID=5818] WebPageProxy::didCommitLoadForFrame: frameID=4294967297, isMainFrame=1
+2026-11-14 08:19:41.538 Df Inyeon[5798:5ca2] [com.apple.WebKit:ProcessSuspension] WebContent[5818]: [webPageID=9] WebPage::unfreezeLayerTree: Removing a reason to freeze layer tree (reason=32, new=1, old=1)
+2026-11-14 08:19:41.550 E  Inyeon[5798:5c2d] [com.apple.WebKit:ResourceLoadStatistics] Failed to request allowed query parameters from WebPrivacy.
+2026-11-14 08:19:41.767 Df Inyeon[5798:5ca2] [com.apple.WebKit:ProcessSuspension] WebContent[5818]: [webPageID=9] WebPage::freezeLayerTree: Adding a reason to freeze layer tree (reason=128, new=129, old=1)
+2026-11-14 08:19:41.771 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [pageID=9, frameID=4294967297, resourceID=27] ResourceLoader::willSendRequestInternal: calling completion handler
+2026-11-14 08:19:41.771 Df Inyeon[5798:5ca2] [com.apple.WebKit:ResourceLoading] WebContent[5818]: [pageID=9, frameID=4294967297, resourceID=27 SubResourceLoader::willSendRequestInternal: resource load finished; calling completion handler
+2026-11-14 08:19:41.771 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webPageID=9, frameID=9, resourceID=9] WebLoaderStrategy::scheduleLoad: URL will be scheduled with the NetworkProcess
+2026-11-14 08:19:41.771 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webPageID=9, frameID=9, resourceID=9] WebLoaderStrategy::scheduleLoad: Resource is being scheduled with the NetworkProcess (priority=3, existingNetworkResourceLoadIdentifierToResume=0)
+2026-11-14 08:19:41.772 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webPageID=9, frameID=4294967297, resourceID=27] WebResourceLoader::WebResourceLoader
+2026-11-14 08:19:41.773 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [pageID=9, frameID=4294967297, resourceID=28] ResourceLoader::willSendRequestInternal: calling completion handler
+2026-11-14 08:19:41.773 Df Inyeon[5798:5ca2] [com.apple.WebKit:ResourceLoading] WebContent[5818]: [pageID=9, frameID=4294967297, resourceID=28 SubResourceLoader::willSendRequestInternal: resource load finished; calling completion handler
+2026-11-14 08:19:41.773 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webPageID=9, frameID=9, resourceID=9] WebLoaderStrategy::scheduleLoad: URL will be scheduled with the NetworkProcess
+2026-11-14 08:19:41.773 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webPageID=9, frameID=9, resourceID=9] WebLoaderStrategy::scheduleLoad: Resource is being scheduled with the NetworkProcess (priority=3, existingNetworkResourceLoadIdentifierToResume=0)
+2026-11-14 08:19:41.773 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webPageID=9, frameID=4294967297, resourceID=28] WebResourceLoader::WebResourceLoader
+2026-11-14 08:19:41.774 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [pageID=9, frameID=4294967297, resourceID=29] ResourceLoader::willSendRequestInternal: calling completion handler
+2026-11-14 08:19:41.774 Df Inyeon[5798:5ca2] [com.apple.WebKit:ResourceLoading] WebContent[5818]: [pageID=9, frameID=4294967297, resourceID=29 SubResourceLoader::willSendRequestInternal: resource load finished; calling completion handler
+2026-11-14 08:19:41.775 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webPageID=9, frameID=9, resourceID=9] WebLoaderStrategy::scheduleLoad: URL will be scheduled with the NetworkProcess
+2026-11-14 08:19:41.775 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webPageID=9, frameID=9, resourceID=9] WebLoaderStrategy::scheduleLoad: Resource is being scheduled with the NetworkProcess (priority=3, existingNetworkResourceLoadIdentifierToResume=0)
+2026-11-14 08:19:41.775 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webPageID=9, frameID=4294967297, resourceID=29] WebResourceLoader::WebResourceLoader
+2026-11-14 08:19:41.778 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webPageID=9, frameID=4294967297, resourceID=18] WebResourceLoader::didFinishResourceLoad: (length=235512)
+2026-11-14 08:19:41.779 Df Inyeon[5798:5ca2] [com.apple.WebKit:ResourceLoading] WebContent[5818]: [pageID=9, frameID=4294967297, resourceID=18 SubResourceLoader::didFinishLoading
+2026-11-14 08:19:41.970 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webPageID=9, frameID=4294967297, resourceID=28] WebResourceLoader::didReceiveResponse: (httpStatusCode=200)
+2026-11-14 08:19:41.970 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webPageID=9, frameID=4294967297, resourceID=28] WebResourceLoader::didReceiveData: Started receiving data
+2026-11-14 08:19:41.970 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webPageID=9, frameID=4294967297, resourceID=28] WebResourceLoader::didFinishResourceLoad: (length=116101)
+2026-11-14 08:19:41.970 Df Inyeon[5798:5ca2] [com.apple.WebKit:ResourceLoading] WebContent[5818]: [pageID=9, frameID=4294967297, resourceID=28 SubResourceLoader::didFinishLoading
+2026-11-14 08:19:41.981 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webPageID=9, frameID=4294967297, resourceID=29] WebResourceLoader::didReceiveResponse: (httpStatusCode=200)
+2026-11-14 08:19:41.984 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webPageID=9, frameID=4294967297, resourceID=29] WebResourceLoader::didReceiveData: Started receiving data
+2026-11-14 08:19:41.984 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webPageID=9, frameID=4294967297, resourceID=29] WebResourceLoader::didFinishResourceLoad: (length=603445)
+2026-11-14 08:19:41.984 Df Inyeon[5798:5ca2] [com.apple.WebKit:ResourceLoading] WebContent[5818]: [pageID=9, frameID=4294967297, resourceID=29 SubResourceLoader::didFinishLoading
+2026-11-14 08:19:42.143 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webPageID=9, frameID=4294967297, resourceID=27] WebResourceLoader::didReceiveResponse: (httpStatusCode=200)
+2026-11-14 08:19:42.260 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webPageID=9, frameID=4294967297, resourceID=27] WebResourceLoader::didReceiveData: Started receiving data
+2026-11-14 08:19:42.260 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webPageID=9, frameID=4294967297, resourceID=27] WebResourceLoader::didFinishResourceLoad: (length=292789)
+2026-11-14 08:19:42.260 Df Inyeon[5798:5ca2] [com.apple.WebKit:ResourceLoading] WebContent[5818]: [pageID=9, frameID=4294967297, resourceID=27 SubResourceLoader::didFinishLoading
+2026-11-14 08:19:42.279 Df Inyeon[5798:5ca2] [com.apple.WebKit:ProcessSuspension] WebContent[5818]: [webPageID=9] WebPage::unfreezeLayerTree: Removing a reason to freeze layer tree (reason=128, new=1, old=129)
+2026-11-14 08:19:42.298 Df Inyeon[5798:5ca2] [com.apple.WebKit:ProcessSuspension] WebContent[5818]: [webPageID=9] WebPage::freezeLayerTree: Adding a reason to freeze layer tree (reason=128, new=129, old=1)
+2026-11-14 08:19:42.299 Df Inyeon[5798:5ca2] [com.apple.WebKit:ProcessSuspension] WebContent[5818]: [webPageID=9] WebPage::unfreezeLayerTree: Removing a reason to freeze layer tree (reason=128, new=1, old=129)
+2026-11-14 08:19:42.537 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [pageID=9, frameID=4294967297, resourceID=34] ResourceLoader::willSendRequestInternal: calling completion handler
+2026-11-14 08:19:42.538 Df Inyeon[5798:5ca2] [com.apple.WebKit:ResourceLoading] WebContent[5818]: [pageID=9, frameID=4294967297, resourceID=34 SubResourceLoader::willSendRequestInternal: resource load finished; calling completion handler
+2026-11-14 08:19:42.538 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webPageID=9, frameID=9, resourceID=9] WebLoaderStrategy::scheduleLoad: URL will be scheduled with the NetworkProcess
+2026-11-14 08:19:42.538 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webPageID=9, frameID=9, resourceID=9] WebLoaderStrategy::scheduleLoad: Resource is being scheduled with the NetworkProcess (priority=2, existingNetworkResourceLoadIdentifierToResume=0)
+2026-11-14 08:19:42.538 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webPageID=9, frameID=4294967297, resourceID=34] WebResourceLoader::WebResourceLoader
+2026-11-14 08:19:42.541 Df Inyeon[5798:5c2d] [com.apple.WebKit:Loading] 0x106031a18 - [pageProxyID=8, webPageID=9, PID=5818] WebPageProxy::didFinishDocumentLoadForFrame: frameID=4294967297, isMainFrame=1
+2026-11-14 08:19:42.563 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [pageID=9, frameID=4294967297, resourceID=42] ResourceLoader::willSendRequestInternal: calling completion handler
+2026-11-14 08:19:42.563 Df Inyeon[5798:5ca2] [com.apple.WebKit:ResourceLoading] WebContent[5818]: [pageID=9, frameID=4294967297, resourceID=42 SubResourceLoader::willSendRequestInternal: resource load finished; calling completion handler
+2026-11-14 08:19:42.563 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webPageID=9, frameID=9, resourceID=9] WebLoaderStrategy::scheduleLoad: URL will be scheduled with the NetworkProcess
+2026-11-14 08:19:42.563 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webPageID=9, frameID=9, resourceID=9] WebLoaderStrategy::scheduleLoad: Resource is being scheduled with the NetworkProcess (priority=2, existingNetworkResourceLoadIdentifierToResume=0)
+2026-11-14 08:19:42.563 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webPageID=9, frameID=4294967297, resourceID=42] WebResourceLoader::WebResourceLoader
+2026-11-14 08:19:42.564 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [pageID=9, frameID=4294967297, resourceID=43] ResourceLoader::willSendRequestInternal: calling completion handler
+2026-11-14 08:19:42.564 Df Inyeon[5798:5ca2] [com.apple.WebKit:ResourceLoading] WebContent[5818]: [pageID=9, frameID=4294967297, resourceID=43 SubResourceLoader::willSendRequestInternal: resource load finished; calling completion handler
+2026-11-14 08:19:42.564 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webPageID=9, frameID=9, resourceID=9] WebLoaderStrategy::scheduleLoad: URL will be scheduled with the NetworkProcess
+2026-11-14 08:19:42.564 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webPageID=9, frameID=9, resourceID=9] WebLoaderStrategy::scheduleLoad: Resource is being scheduled with the NetworkProcess (priority=2, existingNetworkResourceLoadIdentifierToResume=0)
+2026-11-14 08:19:42.564 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webPageID=9, frameID=4294967297, resourceID=43] WebResourceLoader::WebResourceLoader
+2026-11-14 08:19:42.564 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [pageID=9, frameID=4294967297, resourceID=44] ResourceLoader::willSendRequestInternal: calling completion handler
+2026-11-14 08:19:42.564 Df Inyeon[5798:5ca2] [com.apple.WebKit:ResourceLoading] WebContent[5818]: [pageID=9, frameID=4294967297, resourceID=44 SubResourceLoader::willSendRequestInternal: resource load finished; calling completion handler
+2026-11-14 08:19:42.564 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webPageID=9, frameID=9, resourceID=9] WebLoaderStrategy::scheduleLoad: URL will be scheduled with the NetworkProcess
+2026-11-14 08:19:42.564 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webPageID=9, frameID=9, resourceID=9] WebLoaderStrategy::scheduleLoad: Resource is being scheduled with the NetworkProcess (priority=2, existingNetworkResourceLoadIdentifierToResume=0)
+2026-11-14 08:19:42.565 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webPageID=9, frameID=4294967297, resourceID=44] WebResourceLoader::WebResourceLoader
+2026-11-14 08:19:42.818 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webPageID=9, frameID=4294967297, resourceID=34] WebResourceLoader::didReceiveResponse: (httpStatusCode=200)
+2026-11-14 08:19:42.883 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webPageID=9, frameID=4294967297, resourceID=34] WebResourceLoader::didReceiveData: Started receiving data
+2026-11-14 08:19:42.883 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webPageID=9, frameID=4294967297, resourceID=34] WebResourceLoader::didFinishResourceLoad: (length=34736)
+2026-11-14 08:19:42.883 Df Inyeon[5798:5ca2] [com.apple.WebKit:ResourceLoading] WebContent[5818]: [pageID=9, frameID=4294967297, resourceID=34 SubResourceLoader::didFinishLoading
+2026-11-14 08:19:42.890 Df Inyeon[5798:5ca2] [com.apple.WebKit:ProcessSuspension] WebContent[5818]: [webPageID=9] WebPage::unfreezeLayerTree: Removing a reason to freeze layer tree (reason=1, new=0, old=1)
+2026-11-14 08:19:42.891 Df Inyeon[5798:5ca2] [com.apple.WebKit:Layout] WebContent[5818]: [pageID=9, frameID=4294967297, isMainFrame=1] LocalFrameView::fireLayoutRelatedMilestonesIfNeeded: Firing first visually non-empty layout milestone on the main frame
+2026-11-14 08:19:42.891 Df Inyeon[5798:5ca2] [com.apple.WebKit:Layout] WebContent[5818]: [webFrameID=4294967297, webPageID=9] WebLocalFrameLoaderClient::dispatchDidReachLayoutMilestone: dispatching DidReachLayoutMilestone (milestones=DidFirstVisuallyNonEmptyLayout)
+2026-11-14 08:19:42.891 Df Inyeon[5798:5ca2] [com.apple.WebKit:Layout] WebContent[5818]: [webFrameID=4294967297, webPageID=9] WebLocalFrameLoaderClient::dispatchDidReachLayoutMilestone: dispatching DidFirstVisuallyNonEmptyLayoutForFrame
+2026-11-14 08:19:42.891 Df Inyeon[5798:5ca2] [com.apple.WebKit:Layout] WebContent[5818]: [webFrameID=4294967297, webPageID=9] WebLocalFrameLoaderClient::completePageTransitionIfNeeded: dispatching didCompletePageTransition
+2026-11-14 08:19:42.910 Df Inyeon[5798:5ca2] [com.apple.WebKit:Layout] WebContent[5818]: [webFrameID=4294967297, webPageID=9] WebLocalFrameLoaderClient::dispatchDidReachLayoutMilestone: dispatching DidFirstLayoutForFrame
+2026-11-14 08:19:42.910 Df Inyeon[5798:5ca2] [com.apple.WebKit:Layout] WebContent[5818]: [webFrameID=4294967297, webPageID=9] WebLocalFrameLoaderClient::dispatchDidReachLayoutMilestone: dispatching DidReachLayoutMilestone (milestones=DidFirstLayout)
+2026-11-14 08:19:42.911 Df Inyeon[5798:5ca2] [com.apple.WebKit:ResourceLoading] WebContent[5818]: [pageID=9 frameID=4294967297 isMainFrame=1] FrameLoader::setState: main frame load completed
+2026-11-14 08:19:42.911 Df Inyeon[5798:5ca2] [com.apple.WebKit:PerformanceLogging] WebContent[5818]: Memory usage info dump at MainFrameLoadCompleted:
+2026-11-14 08:19:42.911 Df Inyeon[5798:5ca2] [com.apple.WebKit:PerformanceLogging] WebContent[5818]:   page_count: 1
+2026-11-14 08:19:42.911 Df Inyeon[5798:5ca2] [com.apple.WebKit:PerformanceLogging] WebContent[5818]:   backforward_cache_page_count: 0
+2026-11-14 08:19:42.911 Df Inyeon[5798:5ca2] [com.apple.WebKit:PerformanceLogging] WebContent[5818]:   document_count: 1
+2026-11-14 08:19:42.911 Df Inyeon[5798:5ca2] [com.apple.WebKit:PerformanceLogging] WebContent[5818]:   javascript_gc_heap_capacity_mb: 4
+2026-11-14 08:19:42.911 Df Inyeon[5798:5ca2] [com.apple.WebKit:PerformanceLogging] WebContent[5818]:   javascript_gc_heap_extra_memory_size_mb: 0
+2026-11-14 08:19:42.911 Df Inyeon[5798:5ca2] [com.apple.WebKit:PerformanceLogging] WebContent[5818]:   internal_mb: 24
+2026-11-14 08:19:42.912 Df Inyeon[5798:5ca2] [com.apple.WebKit:PerformanceLogging] WebContent[5818]:   compressed_mb: 2
+2026-11-14 08:19:42.912 Df Inyeon[5798:5ca2] [com.apple.WebKit:PerformanceLogging] WebContent[5818]:   phys_footprint_mb: 29
+2026-11-14 08:19:42.912 Df Inyeon[5798:5ca2] [com.apple.WebKit:PerformanceLogging] WebContent[5818]:   resident_size_mb: 162
+2026-11-14 08:19:42.912 Df Inyeon[5798:5ca2] [com.apple.WebKit:PerformanceLogging] WebContent[5818]:   virtual_size_mb: 419233
+2026-11-14 08:19:42.912 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: ProgressTracker::progressCompleted: frameID 4294967297, value 0.497156, tracked frames 1, originating frameID 4294967297, isMainLoad 1
+2026-11-14 08:19:42.912 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: ProgressTracker::finalProgressComplete: value 0.497156, tracked frames 0, originating frameID 4294967297, isMainLoad 1, isMainLoadProgressing 0
+2026-11-14 08:19:42.912 Df Inyeon[5798:5ca2] [com.apple.WebKit:ResourceLoading] WebContent[5818]: [pageID=9 frameID=4294967297 isMainFrame=1] FrameLoader::checkLoadCompleteForThisFrame: Finished frame load
+2026-11-14 08:19:42.914 Df Inyeon[5798:5c2d] [com.apple.WebKit:Loading] 0x106031a18 - [pageProxyID=8, webPageID=9, PID=5818] WebPageProxy::didFinishLoadForFrame: frameID=4294967297, isMainFrame=1
+2026-11-14 08:19:42.914 Df Inyeon[5798:5c2d] [com.apple.WebKit:ProcessSuspension] 0x112124100 - NavigationState will release its process network assertion soon because the page load completed
+2026-11-14 08:19:42.915 Df Inyeon[5798:5c2d] [com.apple.WebKit:ProcessSuspension] 0x1120e01b0 - [PID=5818, throttler=0x1120c8150] ProcessThrottler::Activity::invalidate: Ending foreground activity / 'Client navigation'
+2026-11-14 08:19:42.917 E  Inyeon[5798:5c2d] [com.apple.WebKit:ResourceLoadStatistics] Failed to request restricted opener domains from WebPrivacy
+2026-11-14 08:19:42.932 Df Inyeon[5798:5ca2] [com.apple.WebKit:Layout] WebContent[5818]: [webFrameID=4294967297, webPageID=9] WebLocalFrameLoaderClient::dispatchDidReachLayoutMilestone: dispatching DidReachLayoutMilestone (milestones=DidFirstMeaningfulPaint)
+2026-11-14 08:19:43.562 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webPageID=9, frameID=4294967297, resourceID=43] WebResourceLoader::didReceiveResponse: (httpStatusCode=200)
+2026-11-14 08:19:43.562 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webPageID=9, frameID=4294967297, resourceID=44] WebResourceLoader::didReceiveResponse: (httpStatusCode=200)
+2026-11-14 08:19:43.563 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webPageID=9, frameID=4294967297, resourceID=43] WebResourceLoader::didReceiveData: Started receiving data
+2026-11-14 08:19:43.563 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webPageID=9, frameID=4294967297, resourceID=44] WebResourceLoader::didReceiveData: Started receiving data
+2026-11-14 08:19:43.566 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webPageID=9, frameID=4294967297, resourceID=43] WebResourceLoader::didFinishResourceLoad: (length=2133)
+2026-11-14 08:19:43.566 Df Inyeon[5798:5ca2] [com.apple.WebKit:ResourceLoading] WebContent[5818]: [pageID=9, frameID=4294967297, resourceID=43 SubResourceLoader::didFinishLoading
+2026-11-14 08:19:43.569 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webPageID=9, frameID=4294967297, resourceID=44] WebResourceLoader::didFinishResourceLoad: (length=1045)
+2026-11-14 08:19:43.569 Df Inyeon[5798:5ca2] [com.apple.WebKit:ResourceLoading] WebContent[5818]: [pageID=9, frameID=4294967297, resourceID=44 SubResourceLoader::didFinishLoading
+2026-11-14 08:19:43.569 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webPageID=9, frameID=4294967297, resourceID=42] WebResourceLoader::didReceiveResponse: (httpStatusCode=200)
+2026-11-14 08:19:43.570 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webPageID=9, frameID=4294967297, resourceID=42] WebResourceLoader::didReceiveData: Started receiving data
+2026-11-14 08:19:43.570 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webPageID=9, frameID=4294967297, resourceID=42] WebResourceLoader::didFinishResourceLoad: (length=451)
+2026-11-14 08:19:43.570 Df Inyeon[5798:5ca2] [com.apple.WebKit:ResourceLoading] WebContent[5818]: [pageID=9, frameID=4294967297, resourceID=42 SubResourceLoader::didFinishLoading
+2026-11-14 08:19:43.788 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [pageID=9, frameID=4294967297, resourceID=55] ResourceLoader::willSendRequestInternal: calling completion handler
+2026-11-14 08:19:43.788 Df Inyeon[5798:5ca2] [com.apple.WebKit:ResourceLoading] WebContent[5818]: [pageID=9, frameID=4294967297, resourceID=55 SubResourceLoader::willSendRequestInternal: resource load finished; calling completion handler
+2026-11-14 08:19:43.788 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webPageID=9, frameID=9, resourceID=9] WebLoaderStrategy::scheduleLoad: URL will be scheduled with the NetworkProcess
+2026-11-14 08:19:43.788 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webPageID=9, frameID=9, resourceID=9] WebLoaderStrategy::scheduleLoad: Resource is being scheduled with the NetworkProcess (priority=2, existingNetworkResourceLoadIdentifierToResume=0)
+2026-11-14 08:19:43.788 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webPageID=9, frameID=4294967297, resourceID=55] WebResourceLoader::WebResourceLoader
+2026-11-14 08:19:43.875 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webPageID=9, frameID=4294967297, resourceID=55] WebResourceLoader::didReceiveResponse: (httpStatusCode=200)
+2026-11-14 08:19:43.901 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webPageID=9, frameID=4294967297, resourceID=55] WebResourceLoader::didReceiveData: Started receiving data
+2026-11-14 08:19:43.901 Df Inyeon[5798:5ca2] [com.apple.WebKit:Network] WebContent[5818]: [webPageID=9, frameID=4294967297, resourceID=55] WebResourceLoader::didFinishResourceLoad: (length=37776)
+2026-11-14 08:19:43.901 Df Inyeon[5798:5ca2] [com.apple.WebKit:ResourceLoading] WebContent[5818]: [pageID=9, frameID=4294967297, resourceID=55 SubResourceLoader::didFinishLoading
+2026-11-14 08:19:44.451 Df Inyeon[5798:5c2d] [com.apple.xpc:connection] [0x104f16570] activating connection: mach=true listener=false peer=false name=com.apple.ScreenTimeAgent
+2026-11-14 08:19:44.485 Df Inyeon[5798:5c2d] [com.apple.WebKit:ScreenTime] Screen Time has updated to use the system shield for any blocked URL.
+2026-11-14 08:19:45.915 Df Inyeon[5798:5c2d] [com.apple.WebKit:ProcessSuspension] 0x112124100 NavigationState is releasing background process assertion because a page load completed
+2026-11-14 08:19:45.915 Df Inyeon[5798:5c2d] [com.apple.WebKit:ProcessSuspension] 0x1120e0240 - [PID=5818, throttler=0x1120c8150] ProcessThrottler::Activity::invalidate: Ending background activity / 'Page Load'
+2026-11-14 08:19:52.914 Df Inyeon[5798:5ca2] [com.apple.WebKit:PerformanceLogging] WebContent[5818]: PerformanceMonitor::measurePostLoadMemoryUsage: Process was using 43277952 bytes of memory after the page load.
+2026-11-14 08:19:57.916 Df Inyeon[5798:5ca2] [com.apple.WebKit:PerformanceLogging] WebContent[5818]: PerformanceMonitor::measurePostLoadCPUUsage: Process was using 0.2% CPU after the page load.
+2026-11-14 08:20:17.748 Df log[7245:0] [com.apple.log:] log run noninteractively, parent: 3750 (launchd_sim), args: 'log' 'show' '--last' '2m' '--style' 'compact' '--predicate' 'eventMessage CONTAINS "InyeonJS" OR process == "Inyeon"'
