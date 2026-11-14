@@ -1,0 +1,25 @@
+# App Store 구독 4개 + 인앱 상품 5개 등록 (Actions 탭 → "iOS 인앱 상품 등록" → Run workflow 로 직접 실행)
+# 먼저 App Store Connect 에 '인연큐레이터' 앱(번들 ID com.inyeoncurator.app)이 있어야 함. 이미 있는 상품은 건너뜀.
+name: iOS 인앱 상품 등록
+
+on:
+  workflow_dispatch:
+
+jobs:
+  products:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+      ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+      ASC_KEY_P8: ${{ secrets.ASC_KEY_P8 }}
+    steps:
+      - uses: actions/checkout@v5
+      - name: 등록
+        run: |
+          [ -n "$ASC_KEY_P8" ] || { echo "::error::Secrets 에 ASC_ISSUER_ID / ASC_KEY_ID / ASC_KEY_P8 를 먼저 넣어 주세요"; exit 1; }
+          KID=$(printf '%s' "$ASC_KEY_ID" | tr -d '[:space:]'); IID=$(printf '%s' "$ASC_ISSUER_ID" | tr -d '[:space:]')
+          KEYFILE="$RUNNER_TEMP/AuthKey.p8"
+          printf '%s\n' "$ASC_KEY_P8" | sed 's/^[[:space:]]*//;s/[[:space:]]*$//' > "$KEYFILE"
+          python3 -m pip install --quiet pyjwt cryptography
+          KID=$KID IID=$IID KEYFILE=$KEYFILE BUNDLE_ID=com.inyeoncurator.app python3 ios/ci/asc_products.py
