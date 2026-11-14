@@ -86,6 +86,16 @@ def try_(label, fn):
     try: fn(); return True
     except Exception: print(f"::warning::{label} 실패 — App Store Connect 에서 확인해 주세요"); return False
 
+def set_sub_price(sid, pid, won):
+    # 판매 국가(대한민국)가 먼저 정해져 있어야 가격을 넣을 수 있다
+    pp, real = pick(all_pages(f"/v1/subscriptions/{sid}/pricePoints?filter[territory]=KOR&limit=200"), won)
+    try_(f"{pid} 가격", lambda: call("POST", "/v1/subscriptionPrices", {"data": {"type": "subscriptionPrices",
+        "attributes": {"startDate": None, "preserveCurrentPrice": False},
+        "relationships": {"subscription": {"data": {"type": "subscriptions", "id": sid}},
+                          "subscriptionPricePoint": {"data": {"type": "subscriptionPricePoints", "id": pp}},
+                          "territory": {"data": {"type": "territories", "id": "KOR"}}}}}))
+    return real
+
 def do_subs(app_id, report):
     groups = all_pages(f"/v1/apps/{app_id}/subscriptionGroups?limit=50")
     g = next((x for x in groups if x["attributes"]["referenceName"] == GROUP[0]), None)
@@ -100,7 +110,12 @@ def do_subs(app_id, report):
         report.append(f"구독 그룹 만듦  {GROUP[0]}")
     have = {s["attributes"]["productId"]: s["id"] for s in all_pages(f"/v1/subscriptionGroups/{gid}/subscriptions?limit=50")}
     for pid, name, desc, won, level in SUBS:
-        if pid in have: report.append(f"건너뜀  {pid}"); continue
+        if pid in have:
+            sid = have[pid]
+            if not all_pages(f"/v1/subscriptions/{sid}/prices?limit=5"):   # 가격이 빠진 구독은 채움
+                real = set_sub_price(sid, pid, won); report.append(f"가격 넣음  {pid}  월 ₩{real}")
+            else: report.append(f"건너뜀  {pid}")
+            continue
         sid = call("POST", "/v1/subscriptions", {"data": {"type": "subscriptions",
             "attributes": {"name": name, "productId": pid, "subscriptionPeriod": "ONE_MONTH", "groupLevel": level,
                            "familySharable": False, "reviewNote": REVIEW_NOTE},
@@ -108,16 +123,11 @@ def do_subs(app_id, report):
         try_(f"{pid} 한국어 이름", lambda: call("POST", "/v1/subscriptionLocalizations", {"data": {
             "type": "subscriptionLocalizations", "attributes": {"locale": "ko", "name": name[:30], "description": desc[:45]},
             "relationships": {"subscription": {"data": {"type": "subscriptions", "id": sid}}}}}))
-        pp, real = pick(all_pages(f"/v1/subscriptions/{sid}/pricePoints?filter[territory]=KOR&limit=200"), won)
-        try_(f"{pid} 가격", lambda: call("POST", "/v1/subscriptionPrices", {"data": {"type": "subscriptionPrices",
-            "attributes": {"startDate": None, "preserveCurrentPrice": False},
-            "relationships": {"subscription": {"data": {"type": "subscriptions", "id": sid}},
-                              "subscriptionPricePoint": {"data": {"type": "subscriptionPricePoints", "id": pp}},
-                              "territory": {"data": {"type": "territories", "id": "KOR"}}}}}))
         try_(f"{pid} 판매 국가", lambda: call("POST", "/v1/subscriptionAvailabilities", {"data": {"type": "subscriptionAvailabilities",
             "attributes": {"availableInNewTerritories": False},
             "relationships": {"subscription": {"data": {"type": "subscriptions", "id": sid}},
                               "availableTerritories": {"data": [{"type": "territories", "id": "KOR"}]}}}}))
+        real = set_sub_price(sid, pid, won)
         try_(f"{pid} 심사용 스크린샷", lambda: upload("subscriptionAppStoreReviewScreenshots", "subscription", "subscriptions", sid, SHOT_SUB))
         report.append(f"등록  {pid}  {name}  월 ₩{real}  레벨 {level}")
         time.sleep(0.5)
