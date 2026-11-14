@@ -37,7 +37,7 @@ def setup():
        "-subj", "/CN=Inyeon CI/O=Uiltrade/C=KR")
     csr_txt = open(csr).read()
     # 이전 빌드가 쓴 인증서 정리: Apple 이 빌드를 처리하는 동안 인증서를 지우면 '유효하지 않은 바이너리'가 되므로
-    # 업로드 직후가 아니라 '다음 빌드 때', 그리고 만든 지 2시간 넘은 것만 지운다 (인증서 개수 제한 방지)
+    # 업로드 직후가 아니라 '다음 빌드 때', 그리고 만든 지 45분 넘은 것만 지운다 (인증서 개수 제한(3개) 방지)
     import datetime as _dt
     now = _dt.datetime.now(_dt.timezone.utc)
     for c in call("GET", "/certificates?filter[certificateType]=DISTRIBUTION&limit=50").get("data", []):
@@ -46,7 +46,7 @@ def setup():
             created = _dt.datetime.fromisoformat(exp.replace("Z", "+00:00")) - _dt.timedelta(days=365)
         except Exception:
             continue
-        if now - created > _dt.timedelta(hours=2):
+        if now - created > _dt.timedelta(minutes=45):
             try: call("DELETE", f"/certificates/{c['id']}"); print("revoked old CI cert", c["id"])
             except Exception: pass
     cert = call("POST", "/certificates", {"data": {"type": "certificates", "attributes": {
