@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "130596943360",
+    "project_id": "inyeoncurator",
+    "storage_bucket": "inyeoncurator.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:130596943360:android:2224633a17a6baa5d80ae5",
+        "android_client_info": {
+          "package_name": "com.inyeoncurator.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQUg9vQIZbRhIXz8qjnL3sXLmZILhue7E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
