@@ -31,6 +31,8 @@ import java.util.List;
  *   buy        : 구글플레이 결제창 { productId, accountId } → { productId, purchaseToken, orderId }
  *   consume    : 소비형 상품(관람권 등) 소비 처리 → 다시 살 수 있게 (서버가 지급을 확인한 뒤에만 부름)
  *   unfinished : 결제는 됐는데 아직 지급/소비가 안 끝난 구매 목록
+ *   buy { type:'subs', oldToken } : 구독 (다른 등급 구독 중이면 oldToken 으로 바꾸기)
+ *   subscriptions : 지금 구독 중인 구매 / manageSubs : 구글플레이 구독 관리 화면
  * InyeonNative.openUrl(url): 크롬 커스텀 탭 (카카오·구글·애플 로그인)
  */
 public class Bridge implements PurchasesUpdatedListener {
@@ -43,7 +45,7 @@ public class Bridge implements PurchasesUpdatedListener {
         this.act = act;
         billing = BillingClient.newBuilder(act)
                 .setListener(this)
-                .enablePendingPurchases(PendingPurchasesParams.newBuilder().enableOneTimeProducts().build())
+                .enablePendingPurchases(PendingPurchasesParams.newBuilder().enableOneTimeProducts().enablePrepaidPlans().build())
                 .enableAutoServiceReconnection()
                 .build();
     }
@@ -78,7 +80,9 @@ public class Bridge implements PurchasesUpdatedListener {
         final JSONObject args = a;
         act.runOnUiThread(() -> {
             switch (method) {
-                case "buy": buy(id, args.optString("productId"), args.optString("accountId")); break;
+                case "buy": buy(id, args.optString("productId"), args.optString("accountId"), args.optString("type"), args.optString("oldToken")); break;
+                case "subscriptions": subscriptions(id); break;
+                case "manageSubs": manageSubs(id, args.optString("productId")); break;
                 case "consume": consume(id, args.optString("purchaseToken")); break;
                 case "unfinished": unfinished(id); break;
                 case "pushToken": pushToken(id); break;
@@ -128,13 +132,14 @@ public class Bridge implements PurchasesUpdatedListener {
         });
     }
 
-    private void buy(int id, String productId, String accountId) {
+    private void buy(int id, String productId, String accountId, String type, String oldToken) {
+        final boolean subs = "subs".equals(type);
         if (pendingBuyId != -1) { fail(id, "busy", "이미 결제가 진행 중이에요"); return; }
         whenReady(id, () -> {
             QueryProductDetailsParams params = QueryProductDetailsParams.newBuilder()
                     .setProductList(Collections.singletonList(QueryProductDetailsParams.Product.newBuilder()
                             .setProductId(productId)
-                            .setProductType(BillingClient.ProductType.INAPP)
+                            .setProductType(subs ? BillingClient.ProductType.SUBS : BillingClient.ProductType.INAPP)
                             .build()))
                     .build();
             billing.queryProductDetailsAsync(params, (r, result) -> {
@@ -143,9 +148,22 @@ public class Bridge implements PurchasesUpdatedListener {
                     fail(id, "no_product", "상품을 찾지 못했어요 (" + productId + ")");
                     return;
                 }
+                ProductDetails pd = list.get(0);
+                BillingFlowParams.ProductDetailsParams.Builder pp = BillingFlowParams.ProductDetailsParams.newBuilder().setProductDetails(pd);
+                if (subs) {   // 구독: 기본 요금제(base plan)의 offerToken 이 필요
+                    List<ProductDetails.SubscriptionOfferDetails> offers = pd.getSubscriptionOfferDetails();
+                    if (offers == null || offers.isEmpty()) { fail(id, "no_offer", "구독 요금제를 찾지 못했어요 (" + productId + ")"); return; }
+                    pp.setOfferToken(offers.get(0).getOfferToken());
+                }
                 BillingFlowParams.Builder flow = BillingFlowParams.newBuilder()
-                        .setProductDetailsParamsList(Collections.singletonList(
-                                BillingFlowParams.ProductDetailsParams.newBuilder().setProductDetails(list.get(0)).build()));
+                        .setProductDetailsParamsList(Collections.singletonList(pp.build()));
+                // 다른 등급을 구독 중이면 바꾸기 (남은 기간은 구글이 계산해 반영)
+                if (subs && oldToken != null && !oldToken.isEmpty()) {
+                    flow.setSubscriptionUpdateParams(BillingFlowParams.SubscriptionUpdateParams.newBuilder()
+                            .setOldPurchaseToken(oldToken)
+                            .setSubscriptionReplacementMode(BillingFlowParams.SubscriptionUpdateParams.ReplacementMode.WITH_TIME_PRORATION)
+                            .build());
+                }
                 // 구매를 이 계정에 묶어 둠 → 서버가 다른 사람 영수증을 가로채 쓰는 것을 막음
                 if (accountId != null && !accountId.isEmpty()) flow.setObfuscatedAccountId(accountId);
                 act.runOnUiThread(() -> {
@@ -210,6 +228,27 @@ public class Bridge implements PurchasesUpdatedListener {
                     }
                     ok(id, arr);
                 }));
+    }
+
+    /** 지금 구독 중인 것 (앱을 다시 설치했거나 다른 기기에서 산 구독도 서버에 다시 확인시킬 때) */
+    private void subscriptions(int id) {
+        whenReady(id, () -> billing.queryPurchasesAsync(
+                QueryPurchasesParams.newBuilder().setProductType(BillingClient.ProductType.SUBS).build(),
+                (r, list) -> {
+                    JSONArray arr = new JSONArray();
+                    if (list != null) for (Purchase p : list) {
+                        if (p.getPurchaseState() == Purchase.PurchaseState.PURCHASED) arr.put(purchaseJson(p));
+                    }
+                    ok(id, arr);
+                }));
+    }
+
+    /** 구글플레이 구독 관리 화면 (해지·결제 수단 변경) */
+    private void manageSubs(int id, String productId) {
+        String u = "https://play.google.com/store/account/subscriptions?package=" + act.getPackageName()
+                + (productId != null && !productId.isEmpty() ? "&sku=" + productId : "");
+        act.openExternal(Uri.parse(u));
+        ok(id, new JSONObject());
     }
 
     void destroy() {

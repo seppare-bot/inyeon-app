@@ -1,4 +1,5 @@
 import StoreKit
+import UIKit
 
 struct StoreError: Error { let code: String; let message: String }
 
@@ -54,12 +55,21 @@ final class Store {
         return out
     }
 
+    /// App Store 구독 관리 화면 (해지·등급 변경)
+    func manageSubscriptions() async {
+        if let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
+            try? await AppStore.showManageSubscriptions(in: scene)
+        } else if let u = URL(string: "https://apps.apple.com/account/subscriptions") {
+            await UIApplication.shared.open(u)
+        }
+    }
+
     /// 구매 복원: App Store 와 동기화한 뒤, 지금 가지고 있는(환불 안 된) 아이템 목록
     func entitlements() async throws -> [[String: Any]] {
         try? await AppStore.sync()
         var out: [[String: Any]] = []
         for await v in Transaction.currentEntitlements {
-            if case .verified(let t) = v, t.revocationDate == nil, t.productType == .nonConsumable { out.append(info(t)) }
+            if case .verified(let t) = v, t.revocationDate == nil, t.productType == .nonConsumable || t.productType == .autoRenewable { out.append(info(t)) }
         }
         return out
     }

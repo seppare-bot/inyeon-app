@@ -89,9 +89,12 @@ final class WebViewController: UIViewController, WKScriptMessageHandler, WKNavig
                     resolve(id, ok: true, [String: Any]())
                 case "unfinished":
                     resolve(id, ok: true, await Store.shared.unfinished())
+                case "manageSubs":
+                    await Store.shared.manageSubscriptions()
+                    resolve(id, ok: true, [String: Any]())
                 case "pushToken":
                     resolve(id, ok: true, try await Push.shared.requestToken())
-                case "entitlements":
+                case "subscriptions", "entitlements":
                     resolve(id, ok: true, try await Store.shared.entitlements())
                 default:
                     resolve(id, ok: false, ["code": "unknown", "message": "알 수 없는 요청: \(method)"])
