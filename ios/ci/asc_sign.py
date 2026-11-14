@@ -75,6 +75,16 @@ def setup():
         bid = call("POST", "/bundleIds", {"data": {"type": "bundleIds", "attributes": {
             "identifier": BUNDLE_ID, "name": os.environ.get("BUNDLE_NAME", "Inyeon"), "platform": "IOS"}}})["data"]["id"]
         print("registered bundle id", BUNDLE_ID)
+    # 푸시 알림 기능이 꺼져 있으면 켬 (프로파일에 aps-environment 가 들어가야 푸시 가능)
+    try:
+        caps = call("GET", f"/bundleIds/{bid}/bundleIdCapabilities")["data"]
+        if not any(c["attributes"].get("capabilityType") == "PUSH_NOTIFICATIONS" for c in caps):
+            call("POST", "/bundleIdCapabilities", {"data": {"type": "bundleIdCapabilities",
+                "attributes": {"capabilityType": "PUSH_NOTIFICATIONS"},
+                "relationships": {"bundleId": {"data": {"type": "bundleIds", "id": bid}}}}})
+            print("enabled PUSH_NOTIFICATIONS on", BUNDLE_ID)
+    except Exception as e:
+        print("::warning::푸시 기능 자동 설정 실패 (developer.apple.com 에서 직접 켜 주세요):", e)
     name = f"Inyeon CI {int(time.time())}"
     prof = call("POST", "/profiles", {"data": {"type": "profiles", "attributes": {"name": name, "profileType": "IOS_APP_STORE"},
         "relationships": {"bundleId": {"data": {"type": "bundleIds", "id": bid}},

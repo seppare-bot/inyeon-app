@@ -21,6 +21,7 @@ targets:
         PRODUCT_BUNDLE_IDENTIFIER: com.inyeoncurator.app
         PRODUCT_NAME: Inyeon
         INFOPLIST_FILE: Inyeon/Info.plist
+        CODE_SIGN_ENTITLEMENTS: Inyeon/Inyeon.entitlements
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         CODE_SIGN_STYLE: Automatic
         GENERATE_INFOPLIST_FILE: NO

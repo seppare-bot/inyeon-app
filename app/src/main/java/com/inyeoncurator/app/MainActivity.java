@@ -14,11 +14,16 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.FrameLayout;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
+import android.os.Build;
+
 import androidx.activity.OnBackPressedCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowCompat;
@@ -37,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
     static final String HOST = Uri.parse(BuildConfig.START_URL).getHost();
     static final int BG = 0xFF1C0609;
 
+    static volatile MainActivity current;
     WebView webView;
     Bridge bridge;
     private boolean pageLoaded = false;
@@ -57,10 +63,33 @@ public class MainActivity extends AppCompatActivity {
                 fileCallback = null;
             });
 
+    // 알림 권한 (안드로이드 13 이상)
+    private Runnable afterNotifPermission;
+    private final ActivityResultLauncher<String> notifPermission =
+            registerForActivityResult(new ActivityResultContracts.RequestPermission(), granted -> {
+                Runnable r = afterNotifPermission; afterNotifPermission = null;
+                if (r != null) r.run();
+            });
+
+    void withNotifPermission(Runnable then) {
+        if (Build.VERSION.SDK_INT >= 33 && ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
+            afterNotifPermission = then;
+            notifPermission.launch(Manifest.permission.POST_NOTIFICATIONS);
+        } else then.run();
+    }
+
+    /** FCM 토큰이 바뀌면 웹이 서버에 다시 등록 */
+    void pushTokenChanged(String token) {
+        if (!pageLoaded) return;
+        webView.evaluateJavascript("window.__onPushToken && window.__onPushToken(" + JSONObject.quote(token) + ")", null);
+    }
+
     @SuppressLint("SetJavaScriptEnabled")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        current = this;
+        PushService.ensureChannel(this);
         WindowCompat.setDecorFitsSystemWindows(getWindow(), false);
         WindowCompat.getInsetsController(getWindow(), getWindow().getDecorView()).setAppearanceLightStatusBars(false);
         WindowCompat.getInsetsController(getWindow(), getWindow().getDecorView()).setAppearanceLightNavigationBars(false);
@@ -122,6 +151,7 @@ public class MainActivity extends AppCompatActivity {
             public void onPageFinished(WebView view, String url) {
                 pageLoaded = true;
                 if (pendingDeepLink != null) { String d = pendingDeepLink; pendingDeepLink = null; deliverDeepLink(d); }
+                if (pendingPush != null) { String p = pendingPush; pendingPush = null; webView.postDelayed(() -> webView.evaluateJavascript(p, null), 1500); }
             }
 
             @Override
@@ -165,8 +195,17 @@ public class MainActivity extends AppCompatActivity {
         handleIntent(intent);
     }
 
+    private String pendingPush = null;
+
     private void handleIntent(Intent intent) {
-        if (intent == null || intent.getData() == null) return;
+        if (intent == null) return;
+        String kind = intent.getStringExtra("push_kind");
+        if (kind != null) {                                      // 알림을 눌러서 들어온 경우 → 웹이 알림함/대화를 열게
+            intent.removeExtra("push_kind");
+            String js = "window.__onPushOpen && window.__onPushOpen(" + JSONObject.quote(kind) + "," + JSONObject.quote(String.valueOf(intent.getStringExtra("push_ref"))) + ")";
+            if (pageLoaded) webView.evaluateJavascript(js, null); else pendingPush = js;
+        }
+        if (intent.getData() == null) return;
         Uri u = intent.getData();
         if (DEEP_LINK_SCHEME.equals(u.getScheme())) deliverDeepLink(u.toString());
     }
@@ -196,17 +235,20 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
+        PushService.foreground = false;
         webView.onPause();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
+        PushService.foreground = true;
         webView.onResume();
     }
 
     @Override
     protected void onDestroy() {
+        if (current == this) current = null;
         if (bridge != null) bridge.destroy();
         if (webView != null) {
             ((ViewGroup) webView.getParent()).removeView(webView);

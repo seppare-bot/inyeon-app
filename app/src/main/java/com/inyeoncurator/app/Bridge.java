@@ -81,6 +81,7 @@ public class Bridge implements PurchasesUpdatedListener {
                 case "buy": buy(id, args.optString("productId"), args.optString("accountId")); break;
                 case "consume": consume(id, args.optString("purchaseToken")); break;
                 case "unfinished": unfinished(id); break;
+                case "pushToken": pushToken(id); break;
                 default: fail(id, "unknown", "알 수 없는 요청: " + method);
             }
         });
@@ -94,6 +95,21 @@ public class Bridge implements PurchasesUpdatedListener {
         JSONObject o = new JSONObject();
         try { o.put("code", code); o.put("message", message); } catch (Exception ignored) { }
         act.resolveJs(id, false, o.toString());
+    }
+
+    // ---------------- 푸시 알림 (FCM) ----------------
+
+    /** 알림 권한을 (필요하면) 묻고 FCM 토큰을 돌려줌 → 웹이 서버(register_push)에 등록 */
+    private void pushToken(int id) {
+        if (com.google.firebase.FirebaseApp.getApps(act).isEmpty()) { fail(id, "no_push", "이 빌드에는 푸시 설정이 없어요"); return; }
+        act.withNotifPermission(() ->
+                com.google.firebase.messaging.FirebaseMessaging.getInstance().getToken().addOnCompleteListener(t -> {
+                    if (!t.isSuccessful() || t.getResult() == null) { fail(id, "token", "알림 토큰을 받지 못했어요"); return; }
+                    JSONObject o = new JSONObject();
+                    boolean on = androidx.core.app.NotificationManagerCompat.from(act).areNotificationsEnabled();
+                    try { o.put("token", t.getResult()); o.put("platform", "android"); o.put("enabled", on); } catch (Exception ignored) { }
+                    ok(id, o);
+                }));
     }
 
     // ---------------- 구글플레이 결제 ----------------

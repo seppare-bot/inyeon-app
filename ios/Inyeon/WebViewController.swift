@@ -89,6 +89,8 @@ final class WebViewController: UIViewController, WKScriptMessageHandler, WKNavig
                     resolve(id, ok: true, [String: Any]())
                 case "unfinished":
                     resolve(id, ok: true, await Store.shared.unfinished())
+                case "pushToken":
+                    resolve(id, ok: true, try await Push.shared.requestToken())
                 case "entitlements":
                     resolve(id, ok: true, try await Store.shared.entitlements())
                 default:
@@ -193,4 +195,18 @@ final class WebViewController: UIViewController, WKScriptMessageHandler, WKNavig
 
     // 웹 프로세스가 죽으면(메모리 부족 등) 다시 띄우기
     func webViewWebContentProcessDidTerminate(_ webView: WKWebView) { webView.reload() }
+
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        Push.shared.onOpen = { [weak self] kind, ref in self?.pushOpened(kind, ref) }
+        if let p = Push.shared.pendingOpen {
+            Push.shared.pendingOpen = nil
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { [weak self] in self?.pushOpened(p.0, p.1) }
+        }
+    }
+
+    /// 알림을 눌러 들어온 경우 → 웹이 알림함/대화를 열게
+    func pushOpened(_ kind: String, _ ref: String) {
+        let lit = (try? JSONSerialization.data(withJSONObject: [kind, ref])).flatMap { String(data: $0, encoding: .utf8) } ?? "[\"\",\"\"]"
+        web.evaluateJavaScript("window.__onPushOpen && window.__onPushOpen.apply(null, \(lit));", completionHandler: nil)
+    }
 }

@@ -7,11 +7,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         Store.shared.startListening()
+        Push.shared.start()
         let w = UIWindow(frame: UIScreen.main.bounds)
         w.rootViewController = WebViewController()
         w.makeKeyAndVisible()
         window = w
         return true
+    }
+
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        Push.shared.didRegister(deviceToken)
+    }
+
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        Push.shared.didFail(error)
     }
 
     // com.inyeoncurator.app://auth?... 로 돌아온 경우 (로그인 창 밖에서 열린 경우 대비)
