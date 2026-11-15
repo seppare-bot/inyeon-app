@@ -1,0 +1,21 @@
+name: iOS 구독 판매국가·가격 채우기
+
+on: workflow_dispatch
+jobs:
+  products:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+      ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+      ASC_KEY_P8: ${{ secrets.ASC_KEY_P8 }}
+    steps:
+      - uses: actions/checkout@v5
+      - name: 점검
+        run: |
+          [ -n "$ASC_KEY_P8" ] || { echo "::error::Secrets 에 ASC_ISSUER_ID / ASC_KEY_ID / ASC_KEY_P8 를 먼저 넣어 주세요"; exit 1; }
+          KID=$(printf '%s' "$ASC_KEY_ID" | tr -d '[:space:]'); IID=$(printf '%s' "$ASC_ISSUER_ID" | tr -d '[:space:]')
+          KEYFILE="$RUNNER_TEMP/AuthKey.p8"
+          printf '%s\n' "$ASC_KEY_P8" | sed 's/^[[:space:]]*//;s/[[:space:]]*$//' > "$KEYFILE"
+          python3 -m pip install --quiet pyjwt cryptography
+          KID=$KID IID=$IID KEYFILE=$KEYFILE BUNDLE_ID=com.inyeoncurator.app python3 ios/ci/asc_subs_fix.py
