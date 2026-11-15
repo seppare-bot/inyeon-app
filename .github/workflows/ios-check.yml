@@ -1,6 +1,4 @@
 name: iOS 상품 점검
-# 먼저 App Store Connect 에 '인연큐레이터' 앱(번들 ID com.inyeoncurator.app)이 있어야 함. 이미 있는 상품은 건너뜀.
-name: iOS 인앱 상품 등록
 
 on: workflow_dispatch
 jobs:
