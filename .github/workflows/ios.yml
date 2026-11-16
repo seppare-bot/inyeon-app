@@ -1,4 +1,4 @@
-# 인연큐레이터 아이폰 앱 자동 빌드 (Mac 없이 GitHub 의 macOS 서버에서)
+# 인연갤러리 아이폰 앱 자동 빌드 (Mac 없이 GitHub 의 macOS 서버에서)
 #  1) XcodeGen 으로 Xcode 프로젝트를 만든 뒤 시뮬레이터용으로 빌드
 #  2) 아이폰 시뮬레이터에서 실제로 실행해 화면을 찍어 ci-shots-ios 브랜치에 올림 (확인용)
 #  3) App Store Connect API 키가 Secrets 에 있으면 서명·업로드 → TestFlight

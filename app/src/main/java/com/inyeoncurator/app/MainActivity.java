@@ -32,7 +32,7 @@ import androidx.core.view.WindowInsetsCompat;
 import org.json.JSONObject;
 
 /**
- * 인연큐레이터 — https://inyeoncurator.com 을 앱 안에서 여는 화면 (성모의 뜰 앱과 같은 구조).
+ * 인연갤러리 — https://inyeoncurator.com 을 앱 안에서 여는 화면 (성모의 뜰 앱과 같은 구조).
  * 웹을 고치면(Netlify 배포) 앱을 다시 올리지 않아도 바로 반영된다.
  * 앱만 하는 일: 스토어 결제(Bridge), 로그인은 크롬 탭으로, 사진 고르기, 뒤로 가기.
  */
@@ -142,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
                 Uri u = request.getUrl();
                 if (DEEP_LINK_SCHEME.equals(u.getScheme())) { deliverDeepLink(u.toString()); return true; }
                 String h = u.getHost();
-                if (h != null && (h.equals(HOST) || h.equals("www." + HOST))) return false;   // 인연큐레이터 안 페이지(약관 등)
+                if (h != null && (h.equals(HOST) || h.equals("www." + HOST))) return false;   // 인연갤러리 안 페이지(약관 등)
                 openExternal(u);                                                              // 메일·바깥 링크는 다른 앱으로
                 return true;
             }
@@ -183,7 +183,7 @@ public class MainActivity extends AppCompatActivity {
         pageLoaded = false;
         String html = "<!doctype html><meta name=viewport content='width=device-width,initial-scale=1'>"
                 + "<body style='margin:0;font-family:sans-serif;background:#1c0609;color:#f4e6d0;display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;text-align:center;padding:24px;box-sizing:border-box'>"
-                + "<h2 style='margin:0 0 8px;color:#e8c9a0'>인연큐레이터</h2><p style='color:#b9a68a;line-height:1.6'>인터넷에 연결되지 않았어요.<br>연결을 확인한 뒤 다시 시도해 주세요.</p>"
+                + "<h2 style='margin:0 0 8px;color:#e8c9a0'>인연갤러리</h2><p style='color:#b9a68a;line-height:1.6'>인터넷에 연결되지 않았어요.<br>연결을 확인한 뒤 다시 시도해 주세요.</p>"
                 + "<button onclick=\"location.href='" + BuildConfig.START_URL + "'\" style='margin-top:12px;padding:12px 28px;border:0;border-radius:6px;background:#d9b46a;color:#2a1a05;font-size:16px'>다시 시도</button></body>";
         webView.loadDataWithBaseURL(BuildConfig.START_URL, html, "text/html", "utf-8", null);
     }

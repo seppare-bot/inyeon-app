@@ -1,4 +1,4 @@
-# 인연큐레이터 iOS 앱
+# 인연갤러리 iOS 앱
 
 - 안드로이드 앱과 같은 구조: https://inyeoncurator.com 을 WKWebView 로 열고, 앱은 결제·로그인 복귀만 맡음
 - `window.InyeonNative` (platform() = 'ios'): buy / consume(finish) / unfinished / entitlements(구매 복원), openUrl(로그인 → ASWebAuthenticationSession)

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""인연큐레이터 App Store 상품을 App Store Connect API 로 등록한다 (이미 있는 상품은 건너뜀).
+"""인연갤러리 App Store 상품을 App Store Connect API 로 등록한다 (이미 있는 상품은 건너뜀).
   - 구독 그룹 '인연 멤버십' + 1개월 자동갱신 구독 4개 (블랙 > 플래티넘 > 골드 > 실버)
   - 소모형 5개 (포인트 3종, 관람권 2종)
   - 한국어 이름·설명, 대한민국 가격, 판매 국가: 대한민국, 심사용 스크린샷
@@ -14,7 +14,7 @@ BUNDLE_ID = os.environ.get("BUNDLE_ID", "com.inyeoncurator.app")
 HERE = os.path.dirname(__file__)
 SHOT_SUB, SHOT_IAP = os.path.join(HERE, "review-sub.png"), os.path.join(HERE, "review-shop.png")
 
-GROUP = ("인연 멤버십", "인연큐레이터 멤버십")   # (참조 이름, 앱스토어 표시 이름)
+GROUP = ("인연 멤버십", "인연갤러리 멤버십")   # (참조 이름, 앱스토어 표시 이름)
 # (제품 ID, 이름 ≤30자, 설명 ≤45자, 가격 원, 그룹 레벨 1=최상위)
 SUBS = [
     ("inyeon.sub.black", "블랙 멤버십", "대화·꽃 무제한, 대기 우선, 몰래 관람", 59000, 1),

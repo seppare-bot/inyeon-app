@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""(인연큐레이터) App Store Connect API 로 이번 빌드 전용 배포 인증서 + App Store 프로파일을 만들고(setup),
+"""(인연갤러리) App Store Connect API 로 이번 빌드 전용 배포 인증서 + App Store 프로파일을 만들고(setup),
 업로드가 끝나면 지운다(cleanup). 테스트 기기 없이 TestFlight 업로드를 하기 위한 것.
 환경변수: KID, IID, KEYFILE, BUNDLE_ID, WORK(작업 폴더)"""
 import base64, json, os, subprocess, sys, time, urllib.request, urllib.error

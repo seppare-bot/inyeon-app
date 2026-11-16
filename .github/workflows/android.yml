@@ -1,4 +1,4 @@
-# 인연큐레이터 안드로이드 앱 자동 빌드: main 에 올리면(또는 Actions 탭에서 Run workflow) AAB/APK 를 만들어 Releases 에 올려 줌
+# 인연갤러리 안드로이드 앱 자동 빌드: main 에 올리면(또는 Actions 탭에서 Run workflow) AAB/APK 를 만들어 Releases 에 올려 줌
 name: Android build
 
 on:
@@ -89,7 +89,7 @@ jobs:
       - uses: softprops/action-gh-release@v2
         with:
           tag_name: v1.0.${{ github.run_number }}
-          name: 인연큐레이터 1.0.${{ github.run_number }}
+          name: 인연갤러리 1.0.${{ github.run_number }}
           prerelease: true
           body: |
             - 휴대폰 테스트 설치: `inyeon-1.0.${{ github.run_number }}-test.apk` 를 휴대폰에서 받아 설치

@@ -1,5 +1,5 @@
 # App Store 구독 4개 + 인앱 상품 5개 등록 (Actions 탭 → "iOS 인앱 상품 등록" → Run workflow 로 직접 실행)
-# 먼저 App Store Connect 에 '인연큐레이터' 앱(번들 ID com.inyeoncurator.app)이 있어야 함. 이미 있는 상품은 건너뜀.
+# 먼저 App Store Connect 에 '인연갤러리' 앱(번들 ID com.inyeoncurator.app)이 있어야 함. 이미 있는 상품은 건너뜀.
 name: iOS 인앱 상품 등록
 
 on:
